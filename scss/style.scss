@@ -1,0 +1,157 @@
+
+
+
+/*  INSTALACION SCSS
+
+1.- Instalar nodejs
+2.- Instalar npm
+3.- Ingresar al directorio del repositorio:
+    Iniciar el npm, con npm init
+    Instalar el nodemon: npm install -D node-sass nodemon
+4.- Crear la carpeta SCSS y CSS y sus archivos respectivos (style.css & style.scss)
+5.- Editar el package.json e insertar los lineas:
+    "build-css": "node-sass --include-path scss scss/prueba.scss css/pruebacss.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    Donde se indica cuál será el archivo inicial de SCSS y adónde va a compilar el .CSS
+6.- Compilar con npm: run watch-css
+    sass --watch scss/style.scss css/style.css          */
+
+
+/******************************************************************************MENU***************************************************************************/
+@import'carrito';
+#header{
+    .logo{
+        height: 130px !important;
+        width: 130px;
+        // border: 1px solid red;
+        img{
+            height: 130px !important;
+            width: 130px;
+            // border: 1px solid red;
+        }
+    }
+
+}
+
+
+/******************************************************************************INTRO***************************************************************************/
+
+#introImg{
+    width: 100%;
+    // border: 1px solid red;
+    img{
+        width: 100%;
+    }
+}
+
+/******************************************************************************ProductImg***************************************************************************/
+
+#productImg{
+    width: 100%;
+    // border: 1px solid red;
+    img{
+        width: 100%;
+    }
+}
+
+/******************************************************************************Productos***************************************************************************/
+
+
+#productos{
+    
+    // border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    .row{
+        // border: 1px solid blue;
+
+        .col-md-6{
+            .card-title{
+                text-align: center;
+            }
+            .cantidad{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+            }
+            .cantidad2{
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                div{
+                    // padding: 0;
+                    // margin: 0;
+                    // display: flex;
+                    // justify-content: center;
+                    // align-items: center;
+                    
+                    // height: 10px;
+                    p{
+                        margin: auto;
+                        padding-bottom: 8px;
+                    }
+                    button{
+                        padding: 6px, 6px;
+                    }
+                }
+
+
+
+            }
+            // border: 1px solid blue;
+            .d-flex{
+                img{
+                    height: 300px;
+                }
+            }
+
+        }
+    }
+}
+/******************************************************************************ProductImg2***************************************************************************/
+
+#productImg2{
+    width: 100%;
+    // border: 1px solid red;
+    img{
+        width: 100%;
+    }
+}
+
+/******************************************************************************FOOTER***************************************************************************/
+
+#footer{
+    // border: 1px solid red;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    .footer{
+        background: #152F4F;
+        color:white;
+        
+        .links{
+          ul {list-style-type: none;}
+          li a{
+            color: white;
+            transition: color .2s;
+            &:hover{
+              text-decoration:none;
+              color:#4180CB;
+              }
+          }
+        }  
+        .about-company{
+          i{font-size: 25px;}
+          a{
+            color:white;
+            transition: color .2s;
+            &:hover{color:#4180CB}
+          }
+        } 
+        .location{
+          i{font-size: 18px;}
+        }
+        .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+      }
+}

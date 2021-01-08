@@ -1,0 +1,41 @@
+[{
+    "productoJson": {
+        "nombre": "Pan de Jamon",
+        "precio": 1000,
+        "cantidad": 10,
+        "moneda": "$",
+        "tipo": "Panes de Jamon"
+    }
+}, {
+    "productoJson": {
+        "nombre": "Pan de Jamon con Tocineta",
+        "precio": 1200,
+        "cantidad": 12,
+        "moneda": "$",
+        "tipo": "Panes de Jamon"
+    }
+}, {
+    "productoJson": {
+        "nombre": "Pan de Jamon de Hojaldre y Queso Crema",
+        "precio": 1300,
+        "cantidad": 8,
+        "moneda": "$",
+        "tipo": "Panes de Jamon"
+    }
+}, {
+    "productoJson": {
+        "nombre": "Golfeado",
+        "precio": 200,
+        "cantidad": 30,
+        "moneda": "$",
+        "tipo": "Golfeados"
+    }
+}, {
+    "productoJson": {
+        "nombre": "Golfeado con Queso de mano",
+        "precio": 250,
+        "cantidad": 20,
+        "moneda": "$",
+        "tipo": "Golfeados"
+    }
+}]
