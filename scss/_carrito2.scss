@@ -1,0 +1,136 @@
+
+.cantidad2{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        // padding: 0;
+        // margin: 0;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        
+        // height: 10px;
+        p{
+            margin: auto;
+            padding-bottom: 10px;
+        }
+        button{
+            // padding: 6px, 6px;
+        }
+    }
+}
+
+.fixC{
+    margin-top: -5px;
+}
+
+.shoC{
+    thead{
+        .column-1{
+            width: 25%;
+        }
+        .column-2{
+            width: 30%;
+        }
+        .column-3{
+            width: 15%;
+        }
+        .column-4{
+            width: 15%;
+        }
+        .column-4{
+            width: 15%;
+        }
+    }
+    tbody{
+        .column-1{
+            width: 25%;
+            height: 100px !important;
+            padding: 0;
+            img{
+                height: 90px;
+                margin-left: 20px;
+            }
+        }
+        .column-2{
+            width: 30%;
+            div{
+
+                p{
+
+                }
+                
+            }
+        }
+        .column-3{
+            width: 15%;
+
+            div{
+
+                p{
+
+                }
+                
+            }
+        }
+        .column-4{
+            width: 15%;
+            div{
+                // margin-top: 2px
+            }
+        }
+        .column-5{
+            width: 15%;
+            div{
+                // margin-top: 10px
+            }
+        }
+    }
+}
+
+
+
+.notification{
+    // background-color: #555;
+    // color: white;
+    // text-decoration: none;
+    // padding: 15px 26px;
+    position: relative;
+    display: inline-block;
+    // border-radius: 2px;
+    .cirC{
+        position: absolute;
+        top: -1px;
+        right: 8px;
+        // padding: 5px 10px;
+        border-radius: 50%;
+        background-color: white;
+        color: green;
+        font-size: 20px;
+        border: 1px solid green;
+    }
+    .sizeC{
+        font-size: 220%;
+    }
+    .sizeC2{
+        font-size: 200%;
+        
+    }
+}
+
+@media only screen and (max-width:420px) {
+
+
+}
+
+
+
+
+/*Tablet Style*/
+
+@media only screen and (min-width:421px) and (max-width: 960px){
+
+ 
+}

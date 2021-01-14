@@ -147,7 +147,7 @@ $( ".disappear3a").hide();
 //     console.log( "ready!" );
 //     threeAm();
 // });
-
+$( ".favorite2").hide();
 if(localStorage.getItem('carrito1')!=null){
     $( ".disappear1a").show();
 }
@@ -157,7 +157,13 @@ if(localStorage.getItem('carrito2')!=null){
 if(localStorage.getItem('carrito3')!=null){
     $( ".disappear3a").show();
 }
-
+function favorite(){
+    if(localStorage.getItem('carrito3')!=null || localStorage.getItem('carrito2')!=null || localStorage.getItem('carrito1')!=null){
+        $( ".favorite2").show();
+        $( ".favorite").hide();
+    }
+}
+favorite()
 
 
 // $( ".disappear1a").hide();

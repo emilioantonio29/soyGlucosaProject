@@ -43,104 +43,197 @@ let reducer = (accumulator, currentValue) => accumulator + currentValue;        
 /////////////////////////////////////////////////////////////////// FUNCIONES DE COMPRA /////////////////////////////////////////////////////////////////////////////////////////////
 
 // item1
-function compraFrutilla() {
+// function compraFrutilla() {
 
 
-    if(producto1 > 0){
-        for (let i = 0; i < cantidadItem1; i++){
-            carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
-            carritoP.push(mermeladaFrutilla);     
+//     if(producto1 > 0){
+//         for (let i = 0; i < cantidadItem1; i++){
+//             carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
+//             carritoP.push(mermeladaFrutilla);     
             
+//         }
+//         // carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
+//         // carritoP.push(mermeladaFrutilla);                                                   // mi array de objetos
+//         console.log(carrito);                                                                   
+//         alert("Has agregado una mermelada de Fresa al carrito.");
+//         total = carrito.reduce(reducer);                                                        // add
+//         alert("el precio total es de " + total + "pesos")
+//         final = carrito.concat(carritoP);                                                   
+//         console.log(final);
+//         console.log("ahora el total del carrito es "+ total + "pesos")
+//         totalDom.innerHTML = `${total}`
+//         carritoText()
+//         console.log(`${carritoP}`)
+//         producto1 = producto1-cantidadItem1
+//         cantDis1.innerHTML = `${producto1}`
+//         resetProducto()
+//         cantLand1C.innerHTML = `${mermeladaFrutilla.cantidad - producto1}`
+//         sub1.innerHTML = `${(mermeladaFrutilla.cantidad - producto1) * mermeladaFrutilla.precio}`
+//         $( ".disappear1").show();
+//         console.log(total)
+//     }
+//     else{
+//         alert('ya no hay')
+//     }
+
+
+// }
+
+// // item2
+// function compraNaranja() {
+//     if(producto3 > 0){
+//         for (let i = 0; i < cantidadItem3; i++){
+//             carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
+//             carritoP.push(mermeladaNaranja);     
+//         }
+//         // carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
+//         // carritoP.push(mermeladaNaranja);                                                    // mi array de objetos
+//         console.log(carrito);                                                                   
+//         alert("Has agregado una mermelada de Naranja al carrito.");
+//         total = carrito.reduce(reducer);                                                    // add
+//         alert("el precio total es de " + total + "pesos")
+//         final = carrito.concat(carritoP);                                                   
+//         console.log(final);
+//         console.log("ahora el total del carrito es "+ total + "pesos")
+//         totalDom.innerHTML = `${total}`
+//         carritoText()
+//         console.log(`${carritoP}`)
+//         producto3 = producto3-cantidadItem3
+//         cantDis3.innerHTML = `${producto3}`
+//         resetProducto()
+//         cantLand3C.innerHTML = `${mermeladaNaranja.cantidad - producto3}`
+//         sub3.innerHTML = `${(mermeladaNaranja.cantidad - producto3) * mermeladaNaranja.precio}`
+//         $( ".disappear3").show();
+//     }
+//     else{
+//         alert('ya no hay')
+//     }
+// }
+
+// // item3
+// function compraManzana() {
+//     if(producto2 > 0){  
+//         for (let i = 0; i < cantidadItem2; i++){
+//             carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
+//             carritoP.push(mermeladaManzana);   
+//         }
+//         // carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
+//         // carritoP.push(mermeladaManzana);                                                    // mi array de objetos
+//         console.log(carrito);                                                                   
+//         alert("Has agregado una mermelada de Manzana al carrito.");
+//         total = carrito.reduce(reducer);                                                    // add
+//         alert("el precio total es de " + total + "pesos")
+//         final = carrito.concat(carritoP);                                                   
+//         console.log(final);
+//         console.log("ahora el total del carrito es "+ total + "pesos")
+//         totalDom.innerHTML = `${total}`
+//         carritoText()
+//         console.log(`${carritoP}`)
+//         producto2 = producto2-cantidadItem2
+//         cantDis2.innerHTML = `${producto2}`
+//         resetProducto()
+//         // subtotal2 = subtotal2 + (mermeladaManzana.precio * cantidadItem2)    
+//         cantLand2C.innerHTML = `${mermeladaManzana.cantidad - producto2}`
+//         sub2.innerHTML = `${(mermeladaManzana.cantidad - producto2) * mermeladaManzana.precio}`
+//         $( ".disappear2").show(); 
+//     }
+//     else{
+//         alert('ya no hay')
+//     }
+// }
+
+function comprar(){
+    if(compras==="frutilla"){
+        if(producto1 > 0){
+            for (let i = 0; i < cantidadItem1; i++){
+                carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
+                carritoP.push(mermeladaFrutilla);     
+                
+            }
+            // carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
+            // carritoP.push(mermeladaFrutilla);                                                   // mi array de objetos
+            console.log(carrito);                                                                   
+            alert("Has agregado una mermelada de Fresa al carrito.");
+            total = carrito.reduce(reducer);                                                        // add
+            alert("el precio total es de " + total + "pesos")
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto1 = producto1-cantidadItem1
+            cantDis1.innerHTML = `${producto1}`
+            resetProducto()
+            cantLand1C.innerHTML = `${mermeladaFrutilla.cantidad - producto1}`
+            sub1.innerHTML = `${(mermeladaFrutilla.cantidad - producto1) * mermeladaFrutilla.precio}`
+            $( ".disappear1").show();
+            console.log(total)
         }
-        // carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
-        // carritoP.push(mermeladaFrutilla);                                                   // mi array de objetos
-        console.log(carrito);                                                                   
-        alert("Has agregado una mermelada de Fresa al carrito.");
-        total = carrito.reduce(reducer);                                                        // add
-        alert("el precio total es de " + total + "pesos")
-        final = carrito.concat(carritoP);                                                   
-        console.log(final);
-        console.log("ahora el total del carrito es "+ total + "pesos")
-        totalDom.innerHTML = `${total}`
-        carritoText()
-        console.log(`${carritoP}`)
-        producto1 = producto1-cantidadItem1
-        cantDis1.innerHTML = `${producto1}`
-        resetProducto()
-        cantLand1C.innerHTML = `${mermeladaFrutilla.cantidad - producto1}`
-        sub1.innerHTML = `${(mermeladaFrutilla.cantidad - producto1) * mermeladaFrutilla.precio}`
-        $( ".disappear1").show();
-        console.log(total)
-    }
-    else{
-        alert('ya no hay')
-    }
+        else{
+            alert('ya no hay')
+        }
+    }else if(compras==="manzana"){
+        if(producto2 > 0){  
+            for (let i = 0; i < cantidadItem2; i++){
+                carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
+                carritoP.push(mermeladaManzana);   
+            }
+            // carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
+            // carritoP.push(mermeladaManzana);                                                    // mi array de objetos
+            console.log(carrito);                                                                   
+            alert("Has agregado una mermelada de Manzana al carrito.");
+            total = carrito.reduce(reducer);                                                    // add
+            alert("el precio total es de " + total + "pesos")
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto2 = producto2-cantidadItem2
+            cantDis2.innerHTML = `${producto2}`
+            resetProducto()
+            // subtotal2 = subtotal2 + (mermeladaManzana.precio * cantidadItem2)    
+            cantLand2C.innerHTML = `${mermeladaManzana.cantidad - producto2}`
+            sub2.innerHTML = `${(mermeladaManzana.cantidad - producto2) * mermeladaManzana.precio}`
+            $( ".disappear2").show(); 
+        }
+        else{
+            alert('ya no hay')
+        }
 
-
+    }else if(compras==="naranja"){
+        if(producto3 > 0){
+            for (let i = 0; i < cantidadItem3; i++){
+                carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
+                carritoP.push(mermeladaNaranja);     
+            }
+            // carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
+            // carritoP.push(mermeladaNaranja);                                                    // mi array de objetos
+            console.log(carrito);                                                                   
+            alert("Has agregado una mermelada de Naranja al carrito.");
+            total = carrito.reduce(reducer);                                                    // add
+            alert("el precio total es de " + total + "pesos")
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto3 = producto3-cantidadItem3
+            cantDis3.innerHTML = `${producto3}`
+            resetProducto()
+            cantLand3C.innerHTML = `${mermeladaNaranja.cantidad - producto3}`
+            sub3.innerHTML = `${(mermeladaNaranja.cantidad - producto3) * mermeladaNaranja.precio}`
+            $( ".disappear3").show();
+        }
+        else{
+            alert('ya no hay')
+        }
+    }
 }
 
-// item2
-function compraNaranja() {
-    if(producto3 > 0){
-        for (let i = 0; i < cantidadItem3; i++){
-            carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
-            carritoP.push(mermeladaNaranja);     
-        }
-        // carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
-        // carritoP.push(mermeladaNaranja);                                                    // mi array de objetos
-        console.log(carrito);                                                                   
-        alert("Has agregado una mermelada de Naranja al carrito.");
-        total = carrito.reduce(reducer);                                                    // add
-        alert("el precio total es de " + total + "pesos")
-        final = carrito.concat(carritoP);                                                   
-        console.log(final);
-        console.log("ahora el total del carrito es "+ total + "pesos")
-        totalDom.innerHTML = `${total}`
-        carritoText()
-        console.log(`${carritoP}`)
-        producto3 = producto3-cantidadItem3
-        cantDis3.innerHTML = `${producto3}`
-        resetProducto()
-        cantLand3C.innerHTML = `${mermeladaNaranja.cantidad - producto3}`
-        sub3.innerHTML = `${(mermeladaNaranja.cantidad - producto3) * mermeladaNaranja.precio}`
-        $( ".disappear3").show();
-    }
-    else{
-        alert('ya no hay')
-    }
-}
-
-// item3
-function compraManzana() {
-    if(producto2 > 0){  
-        for (let i = 0; i < cantidadItem2; i++){
-            carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
-            carritoP.push(mermeladaManzana);   
-        }
-        // carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
-        // carritoP.push(mermeladaManzana);                                                    // mi array de objetos
-        console.log(carrito);                                                                   
-        alert("Has agregado una mermelada de Manzana al carrito.");
-        total = carrito.reduce(reducer);                                                    // add
-        alert("el precio total es de " + total + "pesos")
-        final = carrito.concat(carritoP);                                                   
-        console.log(final);
-        console.log("ahora el total del carrito es "+ total + "pesos")
-        totalDom.innerHTML = `${total}`
-        carritoText()
-        console.log(`${carritoP}`)
-        producto2 = producto2-cantidadItem2
-        cantDis2.innerHTML = `${producto2}`
-        resetProducto()
-        // subtotal2 = subtotal2 + (mermeladaManzana.precio * cantidadItem2)    
-        cantLand2C.innerHTML = `${mermeladaManzana.cantidad - producto2}`
-        sub2.innerHTML = `${(mermeladaManzana.cantidad - producto2) * mermeladaManzana.precio}`
-        $( ".disappear2").show(); 
-    }
-    else{
-        alert('ya no hay')
-    }
-}
 
 /////////////////////////////////////////////////////////////////// test & DOM     ///////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -353,25 +446,30 @@ function carritoText(){
 // NOTA: Para algo tan simple como una pagina con pocos productos, la solucion onclick="miFuncion()" en el HTML parece mas sencilla.
 const botonNow = document.querySelectorAll('.botonNow');
 
+let compras = ""
 for (let i = 0; i < botonNow.length; i++) {
     botonNow[i].addEventListener("click", function(e) {
         
         switch(e.target.accessKey){
             case "frutilla":
-                compraFrutilla();
+                compras = e.target.accessKey
+                // console.log(compras)
+                // console.log("test")
+                comprar();
                 // for (let i = 0; i < cantidadItem1; i++){
                 //     compraFrutilla();
                 // }
-                
                 break;
             case "naranja":
-                compraNaranja();
+                compras = e.target.accessKey
+                comprar();
                 // for (let i = 0; i < cantidadItem3; i++){
                 //     compraNaranja();
                 // }
                 break;
             case "manzana":
-                compraManzana();
+                compras = e.target.accessKey
+                comprar();
                 // for (let i = 0; i < cantidadItem2; i++){
                 //     compraManzana();
                 // }
@@ -554,19 +652,19 @@ $(function(){
 
 // API DOLAR BLUE: encontre 
 let dolar = 0
-$(function(){
-    $.ajax({
-        // url: 'https://randomuser.me/api/?results=2',
-        url: 'https://www.dolarsi.com/api/api.php?type=valoresprincipales',
-        success: function(data,status,xhr) {
-          console.log(data);
-        //   console.log(status)  
-        //   console.log(xhr)  
-        //   console.log("=")
-        //   console.log(data.casa[0]);
-        console.log(data[1].casa.venta);
-        dolar = parseFloat(data[1].casa.venta)
-        }
-      });
+// $(function(){
+//     $.ajax({
+//         // url: 'https://randomuser.me/api/?results=2',
+//         url: 'https://www.dolarsi.com/api/api.php?type=valoresprincipales',
+//         success: function(data,status,xhr) {
+//           console.log(data);
+//         //   console.log(status)  
+//         //   console.log(xhr)  
+//         //   console.log("=")
+//         //   console.log(data.casa[0]);
+//         console.log(data[1].casa.venta);
+//         dolar = parseFloat(data[1].casa.venta)
+//         }
+//       });
 
-})
+// })

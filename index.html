@@ -68,9 +68,12 @@
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <!-- Button trigger modal -->
-                  <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop">
-                    <span class="material-icons">
+                  <button type="button" class="btn notification" data-toggle="modal" data-target="#staticBackdrop">
+                    <span class="material-icons sizeC2 favorite">
                       favorite_border
+                    </span>
+                    <span class="material-icons sizeC2 favorite2">
+                      favorite
                     </span>
                   </button>
                   <!-- Modal -->
@@ -144,11 +147,14 @@
                   </div>
 
                   <!-- carrito -->
-                  <button type="button" class="btn" data-toggle="modal" data-target="#staticBackdrop2" onclick="resetProducto()">
+                  <button type="button" class="btn notification" data-toggle="modal" data-target="#staticBackdrop2" onclick="resetProducto()">
                     <!-- <i class="material-icons add_shopping_cart" data-target="#staticBackdrop2">&#xe854;</i> -->
-                    <span class="material-icons">
+                    <span class="material-icons sizeC">
                       shopping_cart
-                      </span>
+                    </span>
+                    <span class="material-icons cirC">
+                      lens
+                    </span>
                   </button>
                   <!-- Modal -->
                   <div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false"
@@ -156,23 +162,171 @@
                     <div class="modal-dialog modal-xl">
                       <div class="modal-content saint-border2">
                         <div id="codepen">
-                          <!-- <h1 class="col-md-12">Shopping Cart</h1> -->
-                          <br>
-                          <br>
-
                           <div class="shopping-cart">
-                            <div class="container">
-                              <div class="row col-md-12 carrito">
-                                <label class="imagen col-md-12">
-                                  <h1 class="col-md-12">Shopping Cart</h1>
-                                </label>
-                              </div>
-                              <div class="row col-md-12 carrito">
-                                <label class="imagen col-md-12">
-                                  <hr></label>
+                            <div class="modal-header">
+                              <h1 class="modal-title">Wishlist</h4>
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="container">
+                                <div class="table-responsive">
+                                  <table class="table shoC">
+                                    <thead class="thead-dark">
+                                      <tr class="">
+                                        <th class="column-1"></th>
+                                        <th class="column-2">
+                                          <label class="d-flex justify-content-left">Producto</label> 
+                                        </th>
+                                        <th class="column-3">
+                                          <label class="d-flex justify-content-center">Precio</label> 
+                                        </th>
+                                        <th class="column-4">
+                                          <label class="d-flex justify-content-center">Cantidad</label> 
+                                        </th>
+                                        <th class="column-5">
+                                          <label class="d-flex justify-content-center">Subtotal</label> 
+                                        </th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr class="disappear1" style="height: 100px;">
+                                        <td class="column-1 align-middle" >
+                                          <div class="d-flex justify-content-left align-items-center" >
+                                            <img class="" src="imagenes/frutilla.png"alt="" >
+                                            <button class="test1 btn"  >x</button>
+                                          </div>
+                                        </td>
+                                        <td class="column-2 align-middle" >
+                                          <div class="" >
+                                            <p >Mermelada de frutilla</p>
+                                          </div>
+                                        </td>
+                                        <td class="column-3 align-middle">
+                                          <div class="d-flex justify-content-center"> 
+                                            <p>$250</p>
+                                          </div>
+                                        </td>
+                                        <td class="column-4 align-middle">
+                                          <div class="d-flex justify-content-center fixC">
+                                              <div class="cantidad2">
+                                                <div class="center">
+                                                  <button type="button" class="btn restarNowC" data-toggle="modal" data-target=""
+                                                    accesskey="removeFrutilla">
+                                                    <span class="material-icons" accesskey="removeFrutilla">remove_circle_outline</span>
+                                                  </button>
+                                                </div>
+                                                <div class="center">
+                                                  <p class="cantidadItemDom cantidadItem1C"></p>
+                                                </div>
+                                                <div class="center">
+                                                  <button type="button botonAdd" class="btn sumarNowC" data-toggle="modal" data-target=""
+                                                    accesskey="addFrutilla">
+                                                    <span class="material-icons" accesskey="addFrutilla">add_circle_outline</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </td>
+                                        <td class="column-3 align-middle">
+                                          <div class="d-flex justify-content-center">
+                                            <p class="subtotal sub1"></p>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr class="disappear2" style="height: 100px;">
+                                        <td class="column-1 align-middle" >
+                                          <div class="d-flex justify-content-left align-items-center" >
+                                            <img class="" src="imagenes/manzana.png"alt="" >
+                                            <button class="test2">x</button>
+                                          </div>
+                                        </td>
+                                        <td class="column-2 align-middle" >
+                                          <div class="" >
+                                            <p >Mermelada de Manzana y Pera</p>
+                                          </div>
+                                        </td>
+                                        <td class="column-3 align-middle">
+                                          <div class="d-flex justify-content-center"> 
+                                            <p>$270</p>
+                                          </div>
+                                        </td>
+                                        <td class="column-4 align-middle">
+                                          <div class="d-flex justify-content-center fixC">
+                                              <div class="cantidad2">
+                                                <div class="center">
+                                                  <button type="button" class="btn restarNowC" data-toggle="modal" data-target=""
+                                                    accesskey="removeManzana">
+                                                    <span class="material-icons" accesskey="removeManzana">remove_circle_outline</span>
+                                                  </button>
+                                                </div>
+                                                <div class="center">
+                                                  <p class="cantidadItemDom cantidadItem2C"></p>
+                                                </div>
+                                                <div class="center">
+                                                  <button type="button botonAdd" class="btn sumarNowC" data-toggle="modal" data-target=""
+                                                    accesskey="addManzana">
+                                                    <span class="material-icons" accesskey="addManzana">add_circle_outline</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </td>
+                                        <td class="column-5 align-middle">
+                                          <div class="d-flex justify-content-center">
+                                            <p class="subtotal sub2"></p>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                      <tr class="disappear3" style="height: 100px;">
+                                        <td class="column-1 align-middle" >
+                                          <div class="d-flex justify-content-left align-items-center" >
+                                            <img class="" src="imagenes/naranja.png"alt="" >
+                                            <button class="test3">x</button>
+                                          </div>
+                                        </td>
+                                        <td class="column-2 align-middle" >
+                                          <div class="" >
+                                            <p >Mermelada de Naranja</p>
+                                          </div>
+                                        </td>
+                                        <td class="column-3 align-middle">
+                                          <div class="d-flex justify-content-center"> 
+                                            <p>$260</p>
+                                          </div>
+                                        </td>
+                                        <td class="column-4 align-middle">
+                                          <div class="d-flex justify-content-center fixC">
+                                              <div class="cantidad2">
+                                                <div class="center">
+                                                  <button type="button" class="btn restarNowC" data-toggle="modal" data-target=""
+                                                    accesskey="removeNaranja">
+                                                    <span class="material-icons" accesskey="removeNaranja">remove_circle_outline</span>
+                                                  </button>
+                                                </div>
+                                                <div class="center">
+                                                  <p class="cantidadItemDom cantidadItem3C"></p>
+                                                </div>
+                                                <div class="center">
+                                                  <button type="button botonAdd" class="btn sumarNowC" data-toggle="modal" data-target=""
+                                                    accesskey="addNaranja">
+                                                    <span class="material-icons" accesskey="addNaranja">add_circle_outline</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </td>
+                                        <td class="column-5 align-middle">
+                                          <div class="d-flex justify-content-center">
+                                            <p class="subtotal sub3"></p>
+                                          </div>
+                                        </td>
+                                      </tr>
+                                    </tbody>
+                                  </table>  
+                                </div>
                               </div>
                             </div>
-                            <br>
+                            <!-- <br>
                             <div class="container">
                               <div class="row col-md-12 carrito">
                                 <label class="imagen col-md-2"></label>
@@ -182,14 +336,14 @@
                                 <label class="subtotal col-md-2">Subtotal</label>
                               </div>
                             </div>
-                            <br>
-                            <div class="container disappear1">
+                            <br> -->
+                            <!-- <div class="container disappear1">
                               <div class="row col-md-12 carrito">
                                 <label class="imagen col-md-2" style="border: 1px solid green;">
                                   <button class="test1">x</button>
-                                  <img class="card-img-top" src="imagenes/frutilla.png"alt="Card image cap"></label>
+                                  <img class="card-img-top" src="imagenes/frutilla.png"alt="Card image cap">
+                                </label>
                                 <label class="description col-md-4">Mermelada de frutilla</label> 
-                                <!-- <button class="test">toggle</button> -->
                                 <label class="precio col-md-2">$250</label>
                                 <label class="cantidad col-md-2 fixC">
                                   <div class="cantidad2">
@@ -212,8 +366,8 @@
                                 </label>
                                 <label class="subtotal col-md-2 sub1"></label>
                               </div>
-                            </div>
-                            <br>
+                            </div> -->
+                            <!-- <br>
                             <div class="container disappear2">
                               <div class="row col-md-12 carrito">
                                 <label class="imagen col-md-2" style="border: 1px solid green;">
@@ -242,9 +396,9 @@
                                 </label>
                                 <label class="subtotal col-md-2 sub2"></label>
                               </div>
-                            </div>
-                            <br>
-                            <div class="container disappear3">
+                            </div> -->
+                            <!-- <br> -->
+                            <!-- <div class="container disappear3">
                               <div class="row col-md-12 carrito">
                                 <label class="imagen col-md-2" style="border: 1px solid green;">
                                   <button class="test3">x</button>
@@ -272,7 +426,7 @@
                                 </label>
                                 <label class="subtotal col-md-2 sub3"></label>
                               </div>
-                            </div>
+                            </div> -->
                             <div class="container">
                               <div class="row col-md-12 carrito">
                                 <label class="imagen col-md-12">
@@ -285,8 +439,6 @@
                                 <label class="imagen col-md-8">
                                   <p id="total2">Aún no has ingresado productos al Carrito</p>
                                 </label>
-                                <!-- <label class="description col-md-4"></label>
-                                <label class="precio col-md-2"></label> -->
                                 <label class="cantidad col-md-2"><p>Total:</p></label>
                                 <label class="subtotal col-md-2">
                                   <p>$ </p>
@@ -296,13 +448,6 @@
                             </div>
                           </div>
                         </div>
-                        <!-- <div class="modal-header">
-                          <h5 class="modal-title" id="staticBackdropLabel2">CheckOut</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div> -->
-
                         <div class="modal-footer">
                           <div class="container">
                             <div class="row col-md-12 carrito">
@@ -317,11 +462,6 @@
                               </label>
                             </div>
                           </div>
-                          <!-- <button type="button" class="btn saint-button" data-dismiss="modal">Volver</button>
-                          <button type="button" class="btn saint-button2" data-dismiss="modal">Volver</button> -->
-                          
-                          <!-- <button type="button" class="btn saint-button2" data-dismiss="modal">Cerrar</button> -->
-                          <!-- <button type="button" class="btn btn-primary">Understood</button> -->
                         </div>
                       </div>
                     </div>
@@ -377,8 +517,7 @@
                   <img class="card-img-top" src="imagenes/frutilla.png" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Frutilla</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's content.</p>
+                    <p class="card-text text-justify product">Mermelada 100% natural elaborada con las frutillas mas frescas. Reducida en azucar.</p>
                       <button type="button" class="btn favoritos" data-toggle="" data-target=""  accesskey="addFrutillaF">
                         <span class="material-icons" accesskey="addFrutillaF">
                           favorite_border
@@ -430,8 +569,7 @@
                   <img class="card-img-top" src="imagenes/manzana.png" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Manzana y Pera</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's content.</p>
+                    <p class="card-text product">Mermelada casera que aprovecha como método de conservación los azúcares saludables que las frutas.</p>
                       <button type="button" class="btn favoritos" data-toggle="" data-target="" accesskey="addManzanaF">
                         <span class="material-icons" accesskey="addManzanaF">
                           favorite_border
@@ -486,8 +624,8 @@
                   <img class="card-img-top" src="imagenes/naranja.png" alt="Card image cap">
                   <div class="card-body">
                     <h5 class="card-title">Naranja</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's content.</p>
+                    <p class="card-text text-justify product">Producto 100% natural elaborado con concentrado de naranja y enriquecido con vitamina C.
+                    </p>
                       <button type="button" class="btn favoritos" accesskey="addNaranjaF">
                         <span class="material-icons" accesskey="addNaranjaF">
                           favorite_border
@@ -537,11 +675,20 @@
               <div class="d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
                   <img class="card-img-top" src="imagenes/coming.png" alt="Card image cap">
+                  <!-- <div class="card-body">
+                    <h5 class="card-title">Jalapeño</h5>
+                    <p class="card-text produc">Coming Soon</p>
+                    <span class="material-icons">favorite_border</span>
+                  </div> -->
                   <div class="card-body">
                     <h5 class="card-title">Jalapeño</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                      card's content.</p>
-                    <span class="material-icons">favorite_border</span>
+                    <p class="card-text text-justify product">Coming Soon.
+                    </p>
+                      <button type="button" class="btn favoritos" accesskey="addNaranjaF">
+                        <span class="material-icons" accesskey="addNaranjaF">
+                          favorite_border
+                        </span>
+                      </button>
                   </div>
                   <ul class="list-group list-group-flush">
                     <li class="list-group-item">

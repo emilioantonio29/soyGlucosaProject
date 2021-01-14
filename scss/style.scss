@@ -18,7 +18,13 @@
 
 
 /******************************************************************************MENU***************************************************************************/
-@import'carrito';
+// @import'carrito';
+@import'carrito2';
+
+body{
+    background-color: #f5ece3;
+}
+
 #header{
     .logo{
         height: 130px !important;
@@ -56,6 +62,20 @@
 
 /******************************************************************************Productos***************************************************************************/
 
+.botonNow {
+    border: none;
+    outline: 0;
+    // padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  .product{
+        height: 60px;
+  }
 
 #productos{
     
@@ -155,3 +175,7 @@
         .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
       }
 }
+
+
+/////////////////////
+
