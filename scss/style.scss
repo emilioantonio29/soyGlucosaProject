@@ -74,7 +74,7 @@ body{
     font-size: 18px;
   }
   .product{
-        height: 60px;
+        height: 90px;
   }
 
 #productos{
@@ -176,6 +176,18 @@ body{
       }
 }
 
+// * {
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//   }
 
+.ajusteCol{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
 /////////////////////
 

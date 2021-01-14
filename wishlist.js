@@ -70,11 +70,17 @@ for (let i = 0; i < favoritos.length; i++) {
             localStorage.setItem("carrito1", producto1F)
             console.log("1")
             $( ".disappear1a").show();
+            $( ".favorite3").show();
+            $( ".favoriteF").hide();
+            favorite()
         }else{
             localStorage.removeItem("carrito1");
             let producto1F = []
             console.log("2")
             $( ".disappear1a").hide();
+            $( ".favorite3").hide();
+            $( ".favoriteF").show();
+            favorite()
         }
     }else if(itemF === "addManzanaF"){
         if(localStorage.getItem('carrito2') == null){
@@ -84,11 +90,17 @@ for (let i = 0; i < favoritos.length; i++) {
             localStorage.setItem("carrito2", producto2F)
             console.log("1")
             $( ".disappear2a").show();
+            $( ".favorite4").show();
+            $( ".favoriteM").hide();
+            favorite()
         }else{
             localStorage.removeItem("carrito2");
             let producto2F = []
             console.log("2")
             $( ".disappear2a").hide();
+            $( ".favorite4").hide();
+            $( ".favoriteM").show();
+            favorite()
         }
     }else if(itemF === "addNaranjaF"){
         if(localStorage.getItem('carrito3') == null){
@@ -98,11 +110,17 @@ for (let i = 0; i < favoritos.length; i++) {
             localStorage.setItem("carrito3", producto3F)
             console.log("1")
             $( ".disappear3a").show();
+            $( ".favorite5").show();
+            $( ".favoriteN").hide();
+            favorite()
         }else{
             localStorage.removeItem("carrito3");
             let producto3F = []
             console.log("2")
             $( ".disappear3a").hide();
+            $( ".favorite5").hide();
+            $( ".favoriteN").show();
+            favorite()
         }
 
     }
@@ -148,24 +166,54 @@ $( ".disappear3a").hide();
 //     threeAm();
 // });
 $( ".favorite2").hide();
+$( ".favorite3").hide();
+$( ".favorite4").hide();
+$( ".favorite5").hide();
 if(localStorage.getItem('carrito1')!=null){
     $( ".disappear1a").show();
+    $( ".favorite3").show();
+    $( ".favoriteF").hide();
 }
 if(localStorage.getItem('carrito2')!=null){
     $( ".disappear2a").show();
+    $( ".favorite4").show();
+    $( ".favoriteM").hide();
 }
 if(localStorage.getItem('carrito3')!=null){
     $( ".disappear3a").show();
+    $( ".favorite5").show();
+    $( ".favoriteN").hide();
 }
 function favorite(){
     if(localStorage.getItem('carrito3')!=null || localStorage.getItem('carrito2')!=null || localStorage.getItem('carrito1')!=null){
         $( ".favorite2").show();
         $( ".favorite").hide();
+    }else {
+        $( ".favorite2").hide();
+        $( ".favorite").show();
     }
+    // }else if(localStorage.getItem('carrito1')===null){
+    //     $( ".favorite3").hide();
+    //     $( ".favorite").show();
+    // }else if(localStorage.getItem('carrito2')===null){
+    //     $( ".favorite4").hide();
+    //     $( ".favorite").show();
+    // }else if(localStorage.getItem('carrito3')===null){
+    //     $( ".favorite5").hide();
+    //     $( ".favorite").show();
+    // }
+    
 }
 favorite()
+
+// function favorite2(){
+//     for (let i = 0; i < localStorage.length; i++){
+
+//     }
+// }
 
 
 // $( ".disappear1a").hide();
 // $( ".disappear2a").hide();
 // $( ".disappear3a").hide();
+

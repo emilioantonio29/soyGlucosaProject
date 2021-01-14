@@ -63,6 +63,25 @@
 .shoC tbody .column-5 {
   width: 15%;
 }
+.botonFa {
+  width: 100px;
+  margin-left: 10px;
+  height: 70px;
+  visibility: hidden;
+}
+
+.disappear1a:hover .botonFa {
+  visibility: visible;
+}
+
+.disappear2a:hover .botonFa {
+  visibility: visible;
+}
+
+.disappear3a:hover .botonFa {
+  visibility: visible;
+}
+
 .notification {
   position: relative;
   display: inline-block;
@@ -84,7 +103,26 @@
   font-size: 200%;
 }
 
+.escon {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px white, 0 0 30px #3a3a3a, 0 0 40px #3a3a3a, 0 0 50px #3a3a3a, 0 0 60px #3a3a3a, 0 0 70px #3a3a3a;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000, 0 0 80px #000000;
+  }
+}
 /*Tablet Style*/
+@media only screen and (min-width: 421px) and (max-width: 960px) {
+  .product {
+    height: 220px !important;
+  }
+}
 body {
   background-color: #f5ece3;
 }
@@ -127,7 +165,7 @@ body {
 }
 
 .product {
-  height: 60px;
+  height: 90px;
 }
 
 #productos {
@@ -201,6 +239,14 @@ body {
 }
 #footer .footer .copyright p {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ajusteCol {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=style.css.map */
