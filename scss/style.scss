@@ -20,6 +20,33 @@
 /******************************************************************************MENU***************************************************************************/
 // @import'carrito';
 @import'carrito2';
+#introImg img{
+    margin-top: 140px !important;
+    // z-index: -2000;
+}
+
+
+// .fixon {
+//     position: static !important;
+//     z-index: -3000;
+//   }
+
+// #staticBackdrop{
+//     position: fixed !important;
+ 
+//     margin: 0px auto !important;
+
+//     margin-top: 50 !important;
+//     z-index: 99999;
+// }
+
+#header .navbar {
+    background: linear-gradient(to right, #f5ece3, white);
+    // display: flex !important;
+    position: fixed;
+    width: 100%;
+    z-index: 16;
+  }
 
 body{
     background-color: #f5ece3;

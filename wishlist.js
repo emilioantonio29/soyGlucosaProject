@@ -217,3 +217,34 @@ favorite()
 // $( ".disappear2a").hide();
 // $( ".disappear3a").hide();
 
+
+const botonFa = document.querySelectorAll('.botonFa');
+
+
+for (let i = 0; i < botonFa.length; i++) {
+    botonFa[i].addEventListener("click", function(e) {
+        
+        console.log(e.target.textContent)
+        // if(e.target.textContent === "Eliminar" ){
+        //     alert("tesr")
+        // }
+        switch(e.target.textContent){
+            case "Eliminar":
+                alert("test")
+                itemF = e.target.accessKey
+                wishlist()
+                break;
+            case "Agregar al Carrito":
+                // compras = e.target.accessKey
+                cantidadItem1 = 1
+                cantidadItem2 = 1
+                cantidadItem3 = 1
+                alert("tester")
+                break; 
+            default:
+                //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
+                break;
+            }
+
+     });
+ };

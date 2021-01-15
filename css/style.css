@@ -64,9 +64,9 @@
   width: 15%;
 }
 .botonFa {
-  width: 100px;
-  margin-left: 10px;
-  height: 70px;
+  width: 100px !important;
+  margin-left: 10px !important;
+  height: 70px !important;
   visibility: hidden;
 }
 
@@ -98,9 +98,28 @@
 }
 .notification .sizeC {
   font-size: 220%;
+  color: #c0a78f;
+  border-color: red;
 }
 .notification .sizeC2 {
   font-size: 200%;
+  color: #c0a78f;
+}
+
+.btn {
+  box-shadow: none !important;
+}
+
+.btn:hover {
+  color: #977a5e;
+}
+
+.favorite:hover {
+  color: #5e4630;
+}
+
+.favorite2:hover {
+  color: #5e4630;
 }
 
 .escon {
@@ -111,10 +130,10 @@
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px white, 0 0 30px #3a3a3a, 0 0 40px #3a3a3a, 0 0 50px #3a3a3a, 0 0 60px #3a3a3a, 0 0 70px #3a3a3a;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #917c67, 0 0 40px #917c67, 0 0 50px #917c67, 0 0 60px #917c67, 0 0 70px #917c67;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #000000, 0 0 60px #000000, 0 0 70px #000000, 0 0 80px #000000;
+    text-shadow: 0 0 20px #fff, 0 0 30px #f5ece3, 0 0 40px #f5ece3, 0 0 50px #f5ece3, 0 0 60px #f5ece3, 0 0 70px #f5ece3, 0 0 80px #f5ece3;
   }
 }
 /*Tablet Style*/
@@ -123,6 +142,17 @@
     height: 220px !important;
   }
 }
+#introImg img {
+  margin-top: 140px !important;
+}
+
+#header .navbar {
+  background: linear-gradient(to right, #f5ece3, white);
+  position: fixed;
+  width: 100%;
+  z-index: 16;
+}
+
 body {
   background-color: #f5ece3;
 }
