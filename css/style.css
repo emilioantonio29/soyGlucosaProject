@@ -92,14 +92,20 @@
   right: 8px;
   border-radius: 50%;
   background-color: white;
-  color: green;
+  color: #a044a0;
   font-size: 20px;
-  border: 1px solid green;
+  border: 1px solid #a047a0;
+  -webkit-animation: glow2 1s ease-in-out infinite alternate;
+  -moz-animation: glow2 1s ease-in-out infinite alternate;
+  animation: glow2 1s ease-in-out infinite alternate;
 }
 .notification .sizeC {
   font-size: 220%;
   color: #c0a78f;
   border-color: red;
+}
+.notification .sizeC:hover {
+  color: #bd7abd;
 }
 .notification .sizeC2 {
   font-size: 200%;
@@ -110,30 +116,34 @@
   box-shadow: none !important;
 }
 
-.btn:hover {
-  color: #977a5e;
+.favoriteF, .favoriteM, .favoriteN, .escon {
+  color: #c0a78f;
 }
 
-.favorite:hover {
-  color: #5e4630;
-}
-
-.favorite2:hover {
-  color: #5e4630;
+.favorite:hover, .favorite2:hover, .escon:hover, .favoriteF:hover, .favoriteM:hover, .favoriteN:hover {
+  color: #bd7abd;
 }
 
 .escon {
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+  -webkit-animation: glow 3s ease-in-out infinite alternate;
+  -moz-animation: glow 3s ease-in-out infinite alternate;
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #917c67, 0 0 40px #917c67, 0 0 50px #917c67, 0 0 60px #917c67, 0 0 70px #917c67;
+    text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 4px #a047a0, 0 0 5px #a047a0, 0 0 7px #a047a0, 0 0 7px #a047a0, 0 0 9px #a047a0;
   }
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #f5ece3, 0 0 40px #f5ece3, 0 0 50px #f5ece3, 0 0 60px #f5ece3, 0 0 70px #f5ece3, 0 0 80px #f5ece3;
+    text-shadow: 0 0 5px #fff, 0 0 7px #f5ece3, 0 0 10px #f5ece3, 0 0 13px #f5ece3, 0 0 15px #f5ece3, 0 0 17px #f5ece3, 0 0 20px #f5ece3;
+  }
+}
+@-webkit-keyframes glow2 {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 8px #a047a0, 0 0 10px #a047a0, 0 0 13px #a047a0, 0 0 15px #a047a0, 0 0 17px #a047a0;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 7px #f5ece3, 0 0 10px #f5ece3, 0 0 13px #f5ece3, 0 0 15px #f5ece3, 0 0 17px #f5ece3, 0 0 20px #f5ece3;
   }
 }
 /*Tablet Style*/

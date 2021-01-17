@@ -169,6 +169,7 @@ function comprar(){
             sub1.innerHTML = `${(mermeladaFrutilla.cantidad - producto1) * mermeladaFrutilla.precio}`
             $( ".disappear1").show();
             console.log(total)
+            avisoLens()
         }
         else{
             alert('ya no hay')
@@ -198,6 +199,7 @@ function comprar(){
             cantLand2C.innerHTML = `${mermeladaManzana.cantidad - producto2}`
             sub2.innerHTML = `${(mermeladaManzana.cantidad - producto2) * mermeladaManzana.precio}`
             $( ".disappear2").show(); 
+            avisoLens()
         }
         else{
             alert('ya no hay')
@@ -227,6 +229,7 @@ function comprar(){
             cantLand3C.innerHTML = `${mermeladaNaranja.cantidad - producto3}`
             sub3.innerHTML = `${(mermeladaNaranja.cantidad - producto3) * mermeladaNaranja.precio}`
             $( ".disappear3").show();
+            avisoLens()
         }
         else{
             alert('ya no hay')
@@ -530,6 +533,7 @@ $(document).ready(function(){
         // total = carrito.reduce(reducer);  
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
+        avisoLens()
     });
 });
 
@@ -560,6 +564,7 @@ $(document).ready(function(){
         // total = carrito.reduce(reducer);  
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
+        avisoLens()
     });
 });
 
@@ -587,6 +592,7 @@ $(document).ready(function(){
         // total = carrito.reduce(reducer);  
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
+        avisoLens()
     });
 });
 
@@ -668,3 +674,13 @@ let dolar = 0
 //       });
 
 // })
+
+lens=[]
+function testing(){
+    lens = carrito.filter(number => number > 0 );
+    console.log("hola")
+}
+
+
+// console.log(greaterTen2); // [23, 12, 45, 78, 11, 10.1, 84]
+

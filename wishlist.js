@@ -62,7 +62,7 @@ for (let i = 0; i < favoritos.length; i++) {
  };
 
  function wishlist(){
-    if(itemF === "addFrutillaF"){
+    if(itemF === "addFrutillaF" || itemF === "frutilla"){
         if(localStorage.getItem('carrito1') == null){
             console.log("test1");
             producto1F = JSON.stringify(mermeladaFrutilla);
@@ -75,14 +75,14 @@ for (let i = 0; i < favoritos.length; i++) {
             favorite()
         }else{
             localStorage.removeItem("carrito1");
-            let producto1F = []
+            producto1F = []
             console.log("2")
             $( ".disappear1a").hide();
             $( ".favorite3").hide();
             $( ".favoriteF").show();
             favorite()
         }
-    }else if(itemF === "addManzanaF"){
+    }else if(itemF === "addManzanaF" || itemF === "manzana"){
         if(localStorage.getItem('carrito2') == null){
             console.log("test1");
             producto2F = JSON.stringify(mermeladaManzana);
@@ -95,14 +95,14 @@ for (let i = 0; i < favoritos.length; i++) {
             favorite()
         }else{
             localStorage.removeItem("carrito2");
-            let producto2F = []
+            producto2F = []
             console.log("2")
             $( ".disappear2a").hide();
             $( ".favorite4").hide();
             $( ".favoriteM").show();
             favorite()
         }
-    }else if(itemF === "addNaranjaF"){
+    }else if(itemF === "addNaranjaF" || itemF === "naranja"){
         if(localStorage.getItem('carrito3') == null){
             console.log("test1");
             producto3F = JSON.stringify(mermeladaNaranja);
@@ -115,7 +115,7 @@ for (let i = 0; i < favoritos.length; i++) {
             favorite()
         }else{
             localStorage.removeItem("carrito3");
-            let producto3F = []
+            producto3F = []
             console.log("2")
             $( ".disappear3a").hide();
             $( ".favorite5").hide();
@@ -239,7 +239,14 @@ for (let i = 0; i < botonFa.length; i++) {
                 cantidadItem1 = 1
                 cantidadItem2 = 1
                 cantidadItem3 = 1
+                // itemF = e.target.accessKey
+                // console.log("hola"+e.target.accessKey)
+                // e.target.accessKey.slice(0, e.target.accessKey.length - 3); 
+                // wishlist()
                 alert("tester")
+                itemF = e.target.accessKey
+                wishlist()
+                // favorite()
                 break; 
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
@@ -248,3 +255,46 @@ for (let i = 0; i < botonFa.length; i++) {
 
      });
  };
+
+ /////////////////////////////////// Aviso lens
+
+//  var lele = carrito.filter(function(number) {
+//     return number > 0;
+//   });
+
+// lens=[]
+// lens2=[]
+// function testing(){
+//     lens = carrito.filter(number => number > 0 );
+//     console.log(lens2)
+// }
+
+// function testing2(){
+//     for(let i = 0; i < lens.length; i++){
+//         if(lens.filter(values) === 250){
+//             console.log("becerro")
+//         }
+//     }
+// }
+
+// const finder = lens.find((item)=>{
+//     return item === 250
+// })
+
+// function testing2(){
+//     lens2 = lens.find(number => number = 250 );
+//     console.log(lens2)
+// }
+
+$( ".cirC").hide();
+
+function avisoLens(){
+    carrito.forEach((items)=>{
+        if(items>0){
+            $( ".cirC").show();
+        }
+        else{
+            $( ".cirC").hide();
+        }
+    })
+}
