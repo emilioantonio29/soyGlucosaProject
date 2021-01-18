@@ -26,11 +26,12 @@ let golfeadoQ = []
 /////////////////////////////////////////////////////////////////// VARIABLES Y ARREGLOS ////////////////////////////////////////////////////////////////////////////////////////////
 
 let total = 0
+let totalDolar = 0
 let carrito = []
 let carritoP = []
 let final = []                                                                          // Aqui uni dos arrays, desafio de la clase
 const totalDom = document.querySelector('#total');
-const totalDom2 = document.querySelector('#total2');
+// const totalDom2 = document.querySelector('#total2');
 /// 20/12/2020: despues se integra mejora para hacer un solo querySelector
 
 
@@ -170,6 +171,7 @@ function comprar(){
             $( ".disappear1").show();
             console.log(total)
             avisoLens()
+            
         }
         else{
             alert('ya no hay')
@@ -419,12 +421,12 @@ for (let i = 0; i < sumarNow.length; i++) {
 
 /////
 function carritoText(){
-    let carritoback = document.querySelector('.saint-button');
+    // let carritoback = document.querySelector('.carFull');
     let carritotext2 = document.querySelector('#total2');
     let carritotext1 = document.querySelector('.saint-button2');
     carritotext1.innerHTML = `<strong style="color: green">Comprar</strong>`
-    carritotext2.innerHTML = ``
-    carritoback.innerHTML = `Volver`
+    // carritotext2.innerHTML = ``
+    // carritoback.innerHTML = `Volver`
 }
 
 
@@ -534,6 +536,7 @@ $(document).ready(function(){
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
         avisoLens()
+
     });
 });
 
@@ -657,7 +660,7 @@ $(function(){
 })
 
 // API DOLAR BLUE: encontre 
-let dolar = 0
+let dolar = 150 // VALOR POR DEFECTO
 // $(function(){
 //     $.ajax({
 //         // url: 'https://randomuser.me/api/?results=2',
@@ -683,4 +686,25 @@ function testing(){
 
 
 // console.log(greaterTen2); // [23, 12, 45, 78, 11, 10.1, 84]
+let tomm = ""
 
+$( "#moneda" ).click(function(e) {
+    console.log(e.target.attributes[3].value)
+    // console.log("GP")
+    // tomm = e.target.attributes[3]
+    if(e.target.attributes[3].value === "false"){
+        $( ".monedaUsd").show();
+        $( ".monedaArs").hide();
+        totalDolar = total / dolar
+        totalDolar = (Math.round(totalDolar * 100) / 100).toFixed(2);
+        $('#totalDolar').html(`${totalDolar}`);
+    }
+    else{
+        $( ".monedaUsd").hide();
+        $( ".monedaArs").show();
+    }
+
+  });
+
+$( ".monedaUsd").hide();
+$( ".monedaArs").show();

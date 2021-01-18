@@ -242,7 +242,10 @@
                 <h1 class="modal-title">Wishlist</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
-              <div class="modal-body">
+              <label class="imagen col-md-8">
+                <p id="total2" class="carNot">Aún no has ingresado productos al Carrito</p>
+              </label>
+              <div class="modal-body carFull">
                 <div class="container">
                   <div class="table-responsive">
                     <table class="table shoC">
@@ -268,12 +271,13 @@
                           <td class="column-1 align-middle" >
                             <div class="d-flex justify-content-left align-items-center" >
                               <img class="" src="imagenes/frutilla.png"alt="" >
-                              <button class="test1 btn">x</button>
+                              <!-- <button class="test1 btn">x</button> -->
+                              <button type="button" class="test1 btn btn-warning">Eliminar</button>
                             </div>
                           </td>
                           <td class="column-2 align-middle" >
                             <div class="" >
-                              <p >Mermelada de frutilla</p>
+                              <p>Mermelada de frutilla</p>
                             </div>
                           </td>
                           <td class="column-3 align-middle">
@@ -312,7 +316,8 @@
                           <td class="column-1 align-middle" >
                             <div class="d-flex justify-content-left align-items-center" >
                               <img class="" src="imagenes/manzana.png"alt="" >
-                              <button class="test2">x</button>
+                              <!-- <button class="test2">x</button> -->
+                              <button type="button" class="test2 btn btn-warning">Eliminar</button>
                             </div>
                           </td>
                           <td class="column-2 align-middle" >
@@ -356,7 +361,8 @@
                           <td class="column-1 align-middle" >
                             <div class="d-flex justify-content-left align-items-center" >
                               <img class="" src="imagenes/naranja.png"alt="" >
-                              <button class="test3">x</button>
+                              <!-- <button class="test3">x</button> -->
+                              <button type="button" class="test3 btn btn-warning">Eliminar</button>
                             </div>
                           </td>
                           <td class="column-2 align-middle" >
@@ -397,11 +403,80 @@
                           </td>
                         </tr>
                       </tbody>
+                      <tfoot class="">
+                        <tr class="">
+                          <th class="column-1"></th>
+                          <th class="column-2">
+                            <label class="d-flex justify-content-left"></label> 
+                          </th>
+                          <th class="column-3">
+                            <label class="d-flex justify-content-center"></label> 
+                          </th>
+                          <th class="column-4">
+                            <!-- <label class="d-flex justify-content-center">MONEDA</label>  -->
+                            <div class="d-flex justify-content-center">
+                              <!-- <button type="button" class="btn btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                <div class="handle"></div>
+                              </button> -->
+                              <button type="button" class="btn btn-sm btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off" id="moneda">
+                                <div class="handle"></div>
+                              </button>
+                          </div>
+                          </th>
+                          <th class="column-5">
+                            <div>
+                              <label class="d-flex justify-content-center">TOTAL</label> 
+                            </div>
+                            
+                          </th>
+                        </tr>
+                        <tr class="">
+                          <th class="column-1"></th>
+                          <th class="column-2">
+                            <label class="d-flex justify-content-left"></label> 
+                          </th>
+                          <th class="column-3">
+                            <label class="d-flex justify-content-center"></label> 
+                          </th>
+                          <th class="column-4 monedaArs">
+                            <div class="d-flex justify-content-center fixC">
+                              <p class="" id="">ARS:</p>
+                            </div>
+                            <!-- <div class="d-flex justify-content-center fixC">
+                              <p class="monedaUsd" id="">USD:</p>
+                            </div> -->
+                          </th>
+                          <th class="column-4 monedaUsd">
+                            <!-- <div class="d-flex justify-content-center fixC">
+                              <p class="" id="">ARS:</p>
+                            </div> -->
+                            <div class="d-flex justify-content-center fixC">
+                              <p class="" id="">USD:</p>
+                            </div>
+                          </th>
+                          <th class="column-5 monedaArs">
+                            <div class="d-flex justify-content-center fixC">
+                              <p class="" id="total"></p>
+                            </div>
+                            <!-- <div class="d-flex justify-content-center fixC">
+                              <p class="monedaUsd" id="">57</p>
+                            </div> -->
+                          </th>
+                          <th class="column-5 monedaUsd">
+                            <!-- <div class="d-flex justify-content-center fixC">
+                              <p class="monedaArs" id="total">56</p>
+                            </div> -->
+                            <div class="d-flex justify-content-center fixC">
+                              <p class="" id="totalDolar"></p>
+                            </div>
+                          </th>
+                        </tr>
+                      </tfoot>
                     </table>  
                   </div>
                 </div>
               </div>
-              <div class="container">
+              <!-- <div class="container">
                 <div class="row col-md-12 carrito">
                   <label class="imagen col-md-12">
                     <hr>
@@ -419,10 +494,14 @@
                     <p id="total"></p>
                   </label>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
           <div class="modal-footer">
+            <button type="button" class="btn btn-secondary btn-dark" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-secondary btn-dark carNot saint-button2 carFull" data-dismiss="modal">Comprar</button>
+          </div>
+          <!-- <div class="modal-footer">
             <div class="container">
               <div class="row col-md-12 carrito">
                 <label class="imagen col-md-2"></label>
@@ -432,11 +511,11 @@
                   <button type="button" class="btn saint-button" data-dismiss="modal"></button>
                 </label>
                 <label class="subtotal col-md-2">
-                  <button type="button" class="btn saint-button2" data-dismiss="modal">Volver</button>
+                  <button type="button" class="btn saint-button2" data-dismiss="modal">Volverr</button>
                 </label>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>

@@ -287,14 +287,35 @@ for (let i = 0; i < botonFa.length; i++) {
 // }
 
 $( ".cirC").hide();
+$( ".carNot").show();
+$( ".carFull").hide();
 
+// function avisoLens(){
+//     carrito.forEach((items)=>{
+//         if(items>0){
+//             $( ".cirC").show();
+//             // $( ".carNot").hide();
+//             // $( ".carFull").show();
+//             console.log("hola")
+//         }
+//         else{
+//             $( ".cirC").hide();
+//             // $( ".carNot").show();
+//             // $( ".carFull").hide();
+//             console.log("nola")
+//         }
+//     })
+// }
 function avisoLens(){
-    carrito.forEach((items)=>{
-        if(items>0){
-            $( ".cirC").show();
-        }
-        else{
-            $( ".cirC").hide();
-        }
-    })
+    if(total > 0){
+        $( ".cirC").show();
+        $( ".carNot").hide();
+        $( ".carFull").show();
+    }else{
+        $( ".cirC").hide();
+        $( ".carNot").show();
+        $( ".carFull").hide();
+    }
 }
+
+
