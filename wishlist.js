@@ -184,13 +184,37 @@ if(localStorage.getItem('carrito3')!=null){
     $( ".favorite5").show();
     $( ".favoriteN").hide();
 }
+// function favorite(){
+//     if(localStorage.getItem('carrito3')!=null || localStorage.getItem('carrito2')!=null || localStorage.getItem('carrito1')!=null){
+//         $( ".favorite2").show();
+//         $( ".favorite").hide();
+//     }else {
+//         $( ".favorite2").hide();
+//         $( ".favorite").show();
+//     }
+//     // }else if(localStorage.getItem('carrito1')===null){
+//     //     $( ".favorite3").hide();
+//     //     $( ".favorite").show();
+//     // }else if(localStorage.getItem('carrito2')===null){
+//     //     $( ".favorite4").hide();
+//     //     $( ".favorite").show();
+//     // }else if(localStorage.getItem('carrito3')===null){
+//     //     $( ".favorite5").hide();
+//     //     $( ".favorite").show();
+//     // }
+    
+// }
 function favorite(){
-    if(localStorage.getItem('carrito3')!=null || localStorage.getItem('carrito2')!=null || localStorage.getItem('carrito1')!=null){
+    if(localStorage.length>0){
         $( ".favorite2").show();
         $( ".favorite").hide();
+        $( "#wishEmpty").hide();
+        $( "#wishEmpty2").show();
     }else {
         $( ".favorite2").hide();
         $( ".favorite").show();
+        $( "#wishEmpty").show();
+        $( "#wishEmpty2").hide();
     }
     // }else if(localStorage.getItem('carrito1')===null){
     //     $( ".favorite3").hide();
