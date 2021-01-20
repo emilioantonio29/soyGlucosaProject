@@ -102,19 +102,25 @@
           <div class="modal-content">
           
             <!-- Modal Header -->
-            <div class="modal-header">
+            <div class="modal-header bordeC">
               <h1 class="modal-title">Wishlist</h4>
               <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
-            <div id="wishEmpty" class="col-md-8">
+            <!-- <div id="wishEmpty" class="col-md-8">
               <img src="imagenes/favoritesEmpty.png" alt="">
+            </div> -->
+            <div id="wishEmpty" class="bordeC">
+              <div class=" d-flex justify-content-center align-items-center flex-column" style="height: 300px;">
+                <img src="imagenes/fEmpty.png" alt="" style="height: 250px;">
+                <p>No hay productos agregados a la lista de favoritos ...</p>
+              </div>
             </div>
             <!-- Modal body -->
-            <div class="modal-body" id="wishEmpty2">
+            <div class="modal-body bordeC" id="wishEmpty2">
               <div class="container">                                                                                   
                 <div class="table-responsive">
                   <table class="table">
-                    <thead class="thead-dark">
+                    <thead class="fondo">
                       <tr class="">
                         <th class="" style="width: 25%;">
                           <label class="d-flex justify-content-left"></label> 
@@ -227,8 +233,8 @@
               </div>
             </div>
             <!-- Modal footer -->
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary btn-dark" data-dismiss="modal">Cerrar</button>
+            <div class="modal-footer bordeC">
+              <button type="button" class="btn borderB" data-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
@@ -295,7 +301,7 @@
                               <img class="" src="imagenes/frutilla.png"alt="" >
                               <!-- <button class="test1 btn">x</button> -->
                               <!-- <button type="button" class="test1 btn btn-warning">Eliminar</button> -->
-                              <div class="deleteButton">
+                              <!-- <div class="deleteButton">
                                 <div class="deleteB">
                                   <button class="delete btn">
                                     <span class="material-icons">
@@ -305,6 +311,20 @@
                                   <div class="overlay">
                                     <div class="text">Hello World</div>
                                   </div>
+                                </div>
+                              </div> -->
+
+                              <div class="trashC">
+                                <div>
+                                <button class="btnTrash">
+                                  <span class="material-icons trash rounded">
+                                    delete_forever
+                                  </span>
+                                </button>
+
+                                </div>
+                                <div class="trashOverlay rounded">
+                                  <button class="trashText rounded">Eliminar</button>
                                 </div>
                               </div>
                             </div>
@@ -949,3 +969,5 @@
   </body>
 
 </html>
+
+
