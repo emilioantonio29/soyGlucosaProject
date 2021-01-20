@@ -236,49 +236,77 @@
       <!-- ============================ MODAL 2======================================= -->
       <div class="modal fade" id="staticBackdrop2" data-backdrop="static" data-keyboard="false"
       tabindex="-1" aria-labelledby="staticBackdropLabel2" aria-hidden="true">
-      <div class="modal-dialog modal-xl">
+      <div class="modal-dialog modal-xl" >
         <div class="modal-content saint-border2">
           <div id="codepen">
             <div class="shopping-cart">
-              <div class="modal-header">
-                <h1 class="modal-title">Cart</h4>
+              <div class="modal-header bordeC">
+                <div class="container">
+                  <h1 class="modal-title ">Cart</h4>
+                </div>
+                
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
               </div>
               <!-- <label class="imagen col-md-8">
                 <p id="total2" class="carNot">Aún no has ingresado productos al Carrito</p>
               </label> -->
-              <div id="total2" class="carNot " style="border:1px solid red; width: 100%;">
-                <!-- <p>Aún no has ingresado productos al Carrito</p> -->
+              <!-- <div id="total2" class="carNot bordeC" >
+                <p>Aún no has ingresado productos al Carrito</p>
                 <img src="imagenes/carEmpty.png" alt="">
+              </div> -->
+              <div id="total2" class="carNot bordeC" >
+                <!-- <p>Aún no has ingresado productos al Carrito</p> -->
+                <!-- <img src="imagenes/cEmpty.png" alt=""> -->
+                <div class="carNot d-flex justify-content-center align-items-center flex-column" >
+                  <!-- <p>Aún no has ingresado productos al Carrito</p> -->
+                  <div class="">
+                    <img src="imagenes/cEmpty.png" alt="" style="height: 250px;">
+                  </div>
+                  
+                  <p>No hay productos agregados al carrito ...</p>
+                </div>
               </div>
-              <div class="modal-body carFull">
+              <div class="modal-body carFull bordeC" >
                 <div class="container">
                   <div class="table-responsive">
                     <table class="table shoC">
-                      <thead class="thead-dark">
+                      <!-- <thead class="thead-dark"> -->
+                      <thead class="fondo">  
                         <tr class="">
                           <th class="column-1"></th>
                           <th class="column-2">
-                            <label class="d-flex justify-content-left">Producto</label> 
+                            <label class="d-flex justify-content-left">PRODUCTO</label> 
                           </th>
                           <th class="column-3">
-                            <label class="d-flex justify-content-center">Precio</label> 
+                            <label class="d-flex justify-content-center">PRECIO</label> 
                           </th>
                           <th class="column-4">
-                            <label class="d-flex justify-content-center">Cantidad</label> 
+                            <label class="d-flex justify-content-center">CANTIDAD</label> 
                           </th>
                           <th class="column-5">
-                            <label class="d-flex justify-content-center">Subtotal</label> 
+                            <label class="d-flex justify-content-center">SUBTOTAL</label> 
                           </th>
                         </tr>
                       </thead>
-                      <tbody>
-                        <tr class="disappear1" style="height: 100px;">
+                      <tbody >
+                          <tr class="disappear1" style="height: 100px;" >
                           <td class="column-1 align-middle" >
                             <div class="d-flex justify-content-left align-items-center" >
                               <img class="" src="imagenes/frutilla.png"alt="" >
                               <!-- <button class="test1 btn">x</button> -->
-                              <button type="button" class="test1 btn btn-warning">Eliminar</button>
+                              <!-- <button type="button" class="test1 btn btn-warning">Eliminar</button> -->
+                              <div class="deleteButton">
+                                <div class="deleteB">
+                                  <button class="delete btn">
+                                    <span class="material-icons">
+                                      delete_forever
+                                      </span>
+                                  </button>
+                                  <div class="overlay">
+                                    <div class="text">Hello World</div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </td>
                           <td class="column-2 align-middle" >
@@ -295,18 +323,18 @@
                             <div class="d-flex justify-content-center fixC">
                                 <div class="cantidad2">
                                   <div class="center">
-                                    <button type="button" class="btn restarNowC" data-toggle="modal" data-target=""
+                                    <button type="button" class="btn restarNowC carAdd" data-toggle="modal" data-target=""
                                       accesskey="removeFrutilla">
-                                      <span class="material-icons" accesskey="removeFrutilla">remove_circle_outline</span>
+                                      <span class="material-icons carAdd" accesskey="removeFrutilla">remove_circle_outline</span>
                                     </button>
                                   </div>
                                   <div class="center">
                                     <p class="cantidadItemDom cantidadItem1C"></p>
                                   </div>
                                   <div class="center">
-                                    <button type="button botonAdd" class="btn sumarNowC" data-toggle="modal" data-target=""
+                                    <button type="button botonAdd carAdd" class="btn sumarNowC" data-toggle="modal" data-target=""
                                       accesskey="addFrutilla">
-                                      <span class="material-icons" accesskey="addFrutilla">add_circle_outline</span>
+                                      <span class="material-icons carAdd" accesskey="addFrutilla">add_circle_outline</span>
                                     </button>
                                   </div>
                                 </div>
@@ -340,18 +368,18 @@
                             <div class="d-flex justify-content-center fixC">
                                 <div class="cantidad2">
                                   <div class="center">
-                                    <button type="button" class="btn restarNowC" data-toggle="modal" data-target=""
+                                    <button type="button" class="btn restarNowC carAdd" data-toggle="modal" data-target=""
                                       accesskey="removeManzana">
-                                      <span class="material-icons" accesskey="removeManzana">remove_circle_outline</span>
+                                      <span class="material-icons carAdd" accesskey="removeManzana">remove_circle_outline</span>
                                     </button>
                                   </div>
                                   <div class="center">
                                     <p class="cantidadItemDom cantidadItem2C"></p>
                                   </div>
                                   <div class="center">
-                                    <button type="button botonAdd" class="btn sumarNowC" data-toggle="modal" data-target=""
+                                    <button type="button botonAdd carAdd" class="btn sumarNowC" data-toggle="modal" data-target=""
                                       accesskey="addManzana">
-                                      <span class="material-icons" accesskey="addManzana">add_circle_outline</span>
+                                      <span class="material-icons carAdd" accesskey="addManzana">add_circle_outline</span>
                                     </button>
                                   </div>
                                 </div>
@@ -385,18 +413,18 @@
                             <div class="d-flex justify-content-center fixC">
                                 <div class="cantidad2">
                                   <div class="center">
-                                    <button type="button" class="btn restarNowC" data-toggle="modal" data-target=""
+                                    <button type="button" class="btn restarNowC carAdd" data-toggle="modal" data-target=""
                                       accesskey="removeNaranja">
-                                      <span class="material-icons" accesskey="removeNaranja">remove_circle_outline</span>
+                                      <span class="material-icons carAdd" accesskey="removeNaranja">remove_circle_outline</span>
                                     </button>
                                   </div>
                                   <div class="center">
                                     <p class="cantidadItemDom cantidadItem3C"></p>
                                   </div>
                                   <div class="center">
-                                    <button type="button botonAdd" class="btn sumarNowC" data-toggle="modal" data-target=""
+                                    <button type="button botonAdd" class="btn sumarNowC carAdd" data-toggle="modal" data-target=""
                                       accesskey="addNaranja">
-                                      <span class="material-icons" accesskey="addNaranja">add_circle_outline</span>
+                                      <span class="material-icons carAdd" accesskey="addNaranja">add_circle_outline</span>
                                     </button>
                                   </div>
                                 </div>
@@ -418,7 +446,7 @@
                           <th class="column-3">
                             <label class="d-flex justify-content-center"></label> 
                           </th>
-                          <th class="column-4">
+                          <th class="column-4 fondo">
                             <!-- <label class="d-flex justify-content-center">MONEDA</label>  -->
                             <div class="d-flex justify-content-center">
                               <!-- <button type="button" class="btn btn-toggle" data-toggle="button" aria-pressed="false" autocomplete="off">
@@ -429,7 +457,7 @@
                               </button>
                           </div>
                           </th>
-                          <th class="column-5">
+                          <th class="column-5 fondo">
                             <div>
                               <label class="d-flex justify-content-center">TOTAL</label> 
                             </div>
@@ -503,8 +531,8 @@
               </div> -->
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary btn-dark" data-dismiss="modal">Cerrar</button>
+          <div class="modal-footer bordeC" >
+            <button type="button" class="btn borderB" data-dismiss="modal">Cerrar</button>
             <button type="button" class="btn btn-secondary btn-dark carNot saint-button2 carFull" data-dismiss="modal">Comprar</button>
           </div>
           <!-- <div class="modal-footer">
@@ -612,7 +640,7 @@
                   </ul>
                   <div class="card-body">
                     <div class="d-flex justify-content-center">
-                      <button class="btn btn-primary btn-lg botonNow botonNow1" accesskey="frutilla">Agregar al carrito</button>
+                      <button class="btn btn-success btn-lg botonNow botonNow1" accesskey="frutilla">Agregar al carrito</button>
                     </div>
                   </div>
                 </div>

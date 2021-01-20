@@ -156,53 +156,6 @@
   background-color: red;
 }
 
-.jumbotron {
-  background: #6b7381;
-  color: #bdc1c8;
-}
-
-.jumbotron h1 {
-  color: #fff;
-}
-
-.example {
-  margin: 4rem auto;
-}
-
-.example > .row {
-  margin-top: 2rem;
-  height: 5rem;
-  vertical-align: middle;
-  text-align: center;
-  border: 1px solid rgba(189, 193, 200, 0.5);
-}
-
-.example > .row:first-of-type {
-  border: none;
-  height: auto;
-  text-align: left;
-}
-
-.example h3 {
-  font-weight: 400;
-}
-
-.example h3 > small {
-  font-weight: 200;
-  font-size: 0.75em;
-  color: #939aa5;
-}
-
-.example h6 {
-  font-weight: 700;
-  font-size: 0.65rem;
-  letter-spacing: 3.32px;
-  text-transform: uppercase;
-  color: #bdc1c8;
-  margin: 0;
-  line-height: 5rem;
-}
-
 .example .btn-toggle {
   top: 50%;
   transform: translateY(-50%);
@@ -451,6 +404,61 @@
 
 .disappear3:hover .test3 {
   visibility: visible;
+}
+
+.fondo {
+  background-color: #f5ece3;
+}
+
+.bordeC {
+  border: 2px solid #a58e78;
+}
+
+.carAdd:hover {
+  color: #83674c;
+}
+
+.borderB {
+  border: 1px solid #a58e78;
+}
+
+.borderB:hover {
+  background-color: #f5ece3;
+}
+
+.deleteButton .deleteB {
+  position: relative;
+  width: 100px;
+}
+.deleteButton .delete {
+  display: block;
+  width: 100px;
+  height: auto;
+}
+.deleteButton .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+.deleteButton .deleteB:hover .overlay {
+  width: 100%;
+}
+.deleteButton .text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
 }
 
 #introImg img {
