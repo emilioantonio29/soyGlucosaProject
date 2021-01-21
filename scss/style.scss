@@ -21,6 +21,7 @@
 // @import'carrito';
 @import'carrito2';
 @import'icons';
+@import'productofinal';
 #introImg img{
     margin-top: 140px !important;
     // z-index: -2000;
@@ -50,7 +51,7 @@
   }
 
 body{
-    background-color: #f5ece3;
+    background: linear-gradient(to right, #f5ece3, white);
 }
 
 #header{
@@ -89,20 +90,73 @@ body{
 }
 
 /******************************************************************************Productos***************************************************************************/
+#productos {
+    // background-color: white;
+    .container{
+        background-color: white;
+        padding: 50px 0px 50px 0px;
+    }
+    .row{
+        // background-color: white;
+        // margin: 0;
+        // padding: 0;
+    }
+}
 
-.botonNow {
-    border: none;
-    outline: 0;
+.btnNoStyle{
+    // border: none;
+    // outline: 0;
     // padding: 12px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
+    color: black;
+    background-color:#f5ece3;
+    // text-align: center;
+    // cursor: pointer;
     width: 100%;
     font-size: 18px;
+    // // padding: 0;
+    // // margin: 0;
+    // width: 120px;
+    height: 60px;
+    // margin-left: 35px;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.btnNoStyle:hover{
+    background-color:  rgb(231, 204, 231);
+}
+
+.botonNow {
+    // border: none;
+    // outline: 0;
+    // padding: 12px;
+    // color: white;
+    // background-color: #000;
+    // text-align: center;
+    // cursor: pointer;
+    // width: 100%;
+    // font-size: 18px;
+    // border: none;
+    // outline: 0;
+    // padding: 12px;
+    // color: white;
+    // background-color: #000;
+    // text-align: center;
+    // cursor: pointer;
+    // width: 100%;
+    // font-size: 18px;
+    // // padding: 0;
+    // // margin: 0;
   }
   .product{
         height: 90px;
+        padding: 0;
+        margin: 0;
+  }
+
+  .product2{
+      padding: 0;
   }
 
 #productos{
@@ -220,3 +274,27 @@ body{
 /////////////////////
 
 // ESTILO TABLA
+#total{
+    // margin-left: -10px
+}
+
+// .totalM{
+//     // margin-left: 10px;
+//     // margin-right: 10px;
+//     width: 5%;
+//     position: relative
+    
+// }
+
+// .upDown{
+//     margin-left:-20px;
+//     display: none !important;
+//     color: #3c763d;
+//     background-color: #dff0d8;
+//     border-color: #d6e9c6;
+//     display: none !important;
+//     position: absolute;
+//     top: 100px;
+//     z-index: 10000;
+//     width: 100%;
+// }

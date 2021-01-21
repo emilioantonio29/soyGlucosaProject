@@ -253,12 +253,19 @@ for (let i = 0; i < botonFa.length; i++) {
         //     alert("tesr")
         // }
         switch(e.target.textContent){
-            case "Eliminar":
-                alert("test")
+            case "delete_forever":
+                // alert("test")
                 itemF = e.target.accessKey
                 wishlist()
+                alertafailure()
                 break;
-            case "Agregar al Carrito":
+            case "Eliminar":
+                // alert("test")
+                itemF = e.target.accessKey
+                wishlist()
+                alertafailure()
+                break;
+            case "Agregar al carrito":
                 // compras = e.target.accessKey
                 cantidadItem1 = 1
                 cantidadItem2 = 1
@@ -267,9 +274,25 @@ for (let i = 0; i < botonFa.length; i++) {
                 // console.log("hola"+e.target.accessKey)
                 // e.target.accessKey.slice(0, e.target.accessKey.length - 3); 
                 // wishlist()
-                alert("tester")
+                // alert("tester")
                 itemF = e.target.accessKey
                 wishlist()
+                favorite()
+                // favorite()
+                break; 
+            case "add_shopping_cart":
+                // compras = e.target.accessKey
+                cantidadItem1 = 1
+                cantidadItem2 = 1
+                cantidadItem3 = 1
+                // itemF = e.target.accessKey
+                // console.log("hola"+e.target.accessKey)
+                // e.target.accessKey.slice(0, e.target.accessKey.length - 3); 
+                // wishlist()
+                // alert("tester")
+                itemF = e.target.accessKey
+                wishlist()
+                favorite()
                 // favorite()
                 break; 
             default:
@@ -339,6 +362,7 @@ function avisoLens(){
         $( ".cirC").hide();
         $( ".carNot").show();
         $( ".carFull").hide();
+        
     }
 }
 

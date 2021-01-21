@@ -91,24 +91,24 @@
 }
 
 .botonFa{
-    width: 100px !important;
-    margin-left: 10px !important;
-    height: 70px !important;
-    visibility: hidden ;
+    // width: 100px !important;
+    // margin-left: 10px !important;
+    // height: 70px !important;
+    // visibility: hidden ;
 }
 
-.disappear1a:hover .botonFa{
+// .disappear1a:hover .botonFa{
     
-    visibility: visible;
-  }
-.disappear2a:hover .botonFa{
+//     visibility: visible;
+//   }
+// .disappear2a:hover .botonFa{
     
-    visibility: visible;
-  }
-  .disappear3a:hover .botonFa{
+//     visibility: visible;
+//   }
+//   .disappear3a:hover .botonFa{
     
-    visibility: visible;
-  }
+//     visibility: visible;
+//   }
 
 
 
@@ -160,7 +160,7 @@
 //     color:  #977a5e;
     
 //   } 
-  .favorite,.favorite2,.escon,.favoriteF,.favoriteM,.favoriteN{
+  .favorite,.favorite2,.escon,.favoriteF,.favoriteM,.favoriteN, .addRemoveFront{
     &:hover {
         color:  rgb(189, 122, 189);
       }
@@ -427,9 +427,9 @@
   
 
   .test1, .test2, .test3{
-      margin-left: 50px;
-      margin-top: -15px;
-    visibility: hidden;
+    //   margin-left: 50px;
+    //   margin-top: -15px;
+    // visibility: hidden;
   }
 
 
