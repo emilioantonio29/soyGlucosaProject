@@ -25,7 +25,7 @@
 }, {
     "productoJson": {
         "nombre": "Golfeado",
-        "precio": 200,
+        "precio": 220,
         "cantidad": 30,
         "moneda": "$",
         "tipo": "Golfeados"
@@ -33,7 +33,7 @@
 }, {
     "productoJson": {
         "nombre": "Golfeado con Queso de mano",
-        "precio": 250,
+        "precio": 300,
         "cantidad": 20,
         "moneda": "$",
         "tipo": "Golfeados"

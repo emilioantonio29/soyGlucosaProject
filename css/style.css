@@ -708,6 +708,10 @@
   font-size: 20px;
 }
 
+.disabled:hover {
+  cursor: not-allowed;
+}
+
 #productImg2 {
   lex-direction: column;
 }
@@ -769,7 +773,7 @@
 }
 
 #header .navbar {
-  background: linear-gradient(to right, #f5ece3, white);
+  background: linear-gradient(to right, #f5ece3, white, #f5ece3, white);
   position: fixed;
   width: 100%;
   z-index: 16;
@@ -797,15 +801,15 @@ body {
 }
 
 /******************************************************************************ProductImg***************************************************************************/
-#productImg {
+.productImg {
   width: 100%;
 }
-#productImg img {
+.productImg img {
   width: 100%;
 }
 
 /******************************************************************************Productos***************************************************************************/
-#productos .container {
+.productos .container, #productImg3 .container {
   background-color: white;
   padding: 50px 0px 50px 0px;
 }
@@ -834,31 +838,31 @@ body {
   padding: 0;
 }
 
-#productos {
+.productos {
   display: flex;
   justify-content: center;
 }
-#productos .row .col-md-6 .card-title {
+.productos .row .col-md-6 .card-title {
   text-align: center;
 }
-#productos .row .col-md-6 .cantidad {
+.productos .row .col-md-6 .cantidad {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-#productos .row .col-md-6 .cantidad2 {
+.productos .row .col-md-6 .cantidad2 {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#productos .row .col-md-6 .cantidad2 div p {
+.productos .row .col-md-6 .cantidad2 div p {
   margin: auto;
   padding-bottom: 8px;
 }
-#productos .row .col-md-6 .cantidad2 div button {
+.productos .row .col-md-6 .cantidad2 div button {
   padding: 6px, 6px;
 }
-#productos .row .col-md-6 .d-flex img {
+.productos .row .col-md-6 .d-flex img {
   height: 300px;
 }
 

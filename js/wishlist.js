@@ -11,23 +11,33 @@ let itemF= ""
 let producto1F = []
 let producto2F = []
 let producto3F = []
+let producto4F = []
+let producto5F = []
 // let producto1Fc = []
 // let producto1Fc =  JSON.parse(producto1F);
 function wishlistAct(){
-    if(itemF === "addFrutillaF"){
-        producto1F = localStorage.getItem('carrito1');
-        producto1F = JSON.parse(producto1F);
-        console.log(producto1F)
-    }else if(itemF === "addManzanaF"){
-        producto2F = localStorage.getItem('carrito2');
-        producto2F = JSON.parse(producto2F);
-        console.log(producto2F)
-    }else if (itemF === "addNaranjaF"){
-        producto3F = localStorage.getItem('carrito3');
-        producto3F = JSON.parse(producto3F);
-        console.log(producto3F)
-    }
-
+    // if(itemF === "addFrutillaF"){
+    //     producto1F = localStorage.getItem('carrito1');
+    //     producto1F = JSON.parse(producto1F);
+    //     console.log(producto1F)
+    // }else if(itemF === "addManzanaF"){
+    //     producto2F = localStorage.getItem('carrito2');
+    //     producto2F = JSON.parse(producto2F);
+    //     console.log(producto2F)
+    // }else if (itemF === "addNaranjaF"){
+    //     producto3F = localStorage.getItem('carrito3');
+    //     producto3F = JSON.parse(producto3F);
+    //     console.log(producto3F)
+    // }else     if(itemF === "addFrutillaF22"){
+    //     producto4F = localStorage.getItem('carrito4');
+    //     producto4F = JSON.parse(producto4F);
+    //     console.log(producto4F)
+    // }else if(itemF === "addManzanaF2"){
+    //     producto5F = localStorage.getItem('carrito5');
+    //     producto5F = JSON.parse(producto5F);
+    //     console.log(producto5F)
+    // }
+    console.log("algo")
 }
 wishlistAct()
 
@@ -54,6 +64,16 @@ for (let i = 0; i < favoritos.length; i++) {
                 wishlist()
                 wishlistAct()
                 break;      
+            case "addFrutillaF2":
+                itemF=e.target.accessKey
+                wishlist()
+                wishlistAct()
+                break;    
+            case "addManzanaF2":
+                itemF=e.target.accessKey
+                wishlist()
+                wishlistAct()
+                break;  
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                 break;
@@ -123,6 +143,46 @@ for (let i = 0; i < favoritos.length; i++) {
             favorite()
         }
 
+    }else     if(itemF === "addFrutillaF2" || itemF === "frutilla2"){ //temporada2
+        if(localStorage.getItem('carrito4') == null){
+            console.log("test4");
+            producto1F = JSON.stringify(golfeado);
+            console.log(producto4F);
+            localStorage.setItem("carrito4", producto4F)
+            console.log("1")
+            $( ".disappear4a").show();
+            $( ".favorite6").show();
+            $( ".favoriteF2").hide();
+            favorite()
+        }else{
+            localStorage.removeItem("carrito4");
+            producto1F = []
+            console.log("2")
+            $( ".disappear4a").hide();
+            $( ".favorite6").hide();
+            $( ".favoriteF2").show();
+            favorite()
+        }
+    }else if(itemF === "addManzanaF2" || itemF === "manzana2"){
+        if(localStorage.getItem('carrito5') == null){
+            console.log("test5");
+            producto5F = JSON.stringify(golfeadoQ);
+            console.log(producto5F);
+            localStorage.setItem("carrito5", producto5F)
+            console.log("1")
+            $( ".disappear5a").show();
+            $( ".favorite7").show();
+            $( ".favoriteM2").hide();
+            favorite()
+        }else{
+            localStorage.removeItem("carrito5");
+            producto5F = []
+            console.log("2")
+            $( ".disappear5a").hide();
+            $( ".favorite7").hide();
+            $( ".favoriteM2").show();
+            favorite()
+        }
     }
 }
 // producto1Fc = JSON.parse(producto1F);
@@ -135,6 +195,8 @@ for (let i = 0; i < favoritos.length; i++) {
 $( ".disappear1a").hide();
 $( ".disappear2a").hide();
 $( ".disappear3a").hide();
+$( ".disappear4a").hide();
+$( ".disappear5a").hide();
 
 // function threeAm(){
 //     for(let i = 0; i < localStorage.length; i++){
@@ -169,6 +231,8 @@ $( ".favorite2").hide();
 $( ".favorite3").hide();
 $( ".favorite4").hide();
 $( ".favorite5").hide();
+$( ".favorite6").hide();
+$( ".favorite7").hide();
 if(localStorage.getItem('carrito1')!=null){
     $( ".disappear1a").show();
     $( ".favorite3").show();
@@ -183,6 +247,16 @@ if(localStorage.getItem('carrito3')!=null){
     $( ".disappear3a").show();
     $( ".favorite5").show();
     $( ".favoriteN").hide();
+}
+if(localStorage.getItem('carrito4')!=null){
+    $( ".disappear4a").show();
+    $( ".favorite6").show();
+    $( ".favoriteF2").hide();
+}
+if(localStorage.getItem('carrito5')!=null){
+    $( ".disappear5a").show();
+    $( ".favorite7").show();
+    $( ".favoriteM2").hide();
 }
 // function favorite(){
 //     if(localStorage.getItem('carrito3')!=null || localStorage.getItem('carrito2')!=null || localStorage.getItem('carrito1')!=null){
@@ -270,6 +344,8 @@ for (let i = 0; i < botonFa.length; i++) {
                 cantidadItem1 = 1
                 cantidadItem2 = 1
                 cantidadItem3 = 1
+                cantidadItem4 = 1
+                cantidadItem5 = 1
                 // itemF = e.target.accessKey
                 // console.log("hola"+e.target.accessKey)
                 // e.target.accessKey.slice(0, e.target.accessKey.length - 3); 
@@ -285,6 +361,8 @@ for (let i = 0; i < botonFa.length; i++) {
                 cantidadItem1 = 1
                 cantidadItem2 = 1
                 cantidadItem3 = 1
+                cantidadItem4 = 1
+                cantidadItem5 = 1
                 // itemF = e.target.accessKey
                 // console.log("hola"+e.target.accessKey)
                 // e.target.accessKey.slice(0, e.target.accessKey.length - 3); 

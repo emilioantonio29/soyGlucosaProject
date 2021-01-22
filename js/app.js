@@ -1,3 +1,28 @@
+// AJAXX ///////////////////
+// $(function(){
+//     $.ajax({
+//         // method: 'GET',
+//         url: 'datos.json',
+//         success: function(data,status,xhr){     
+//             console.log(data)   
+//             console.log(status)  
+//             console.log(xhr)          
+//             console.log("==========================")  
+//             panDeJamon = new producto(data[0].productoJson.nombre, data[0].productoJson.precio, data[0].productoJson.cantidad, data[0].productoJson.moneda, data[0].productoJson.tipo);  
+//             panDeJamonT = new producto(data[1].productoJson.nombre, data[1].productoJson.precio, data[1].productoJson.cantidad, data[1].productoJson.moneda, data[1].productoJson.tipo);   
+//             panDeJamonH = new producto(data[2].productoJson.nombre, data[2].productoJson.precio, data[2].productoJson.cantidad, data[2].productoJson.moneda, data[2].productoJson.tipo);                      // success puede recibir hasta 3 parametros; 1) la respuesta del recurso que estamos consultando, 2) estatus, 3) 
+//             golfeado = new producto(data[3].productoJson.nombre, data[3].productoJson.precio, data[3].productoJson.cantidad, data[3].productoJson.moneda, data[3].productoJson.tipo);                      // success puede recibir hasta 3 parametros; 1) la respuesta del recurso que estamos consultando, 2) estatus, 3) 
+//             golfeadoQ = new producto(data[4].productoJson.nombre, data[4].productoJson.precio, data[4].productoJson.cantidad, data[4].productoJson.moneda, data[4].productoJson.tipo);                      // success puede recibir hasta 3 parametros; 1) la respuesta del recurso que estamos consultando, 2) estatus, 3) 
+
+//         },                                                      
+//         error: function(xhr,status,errorThrown){
+//             console.log(xhr)  
+//             console.log(status)
+//             console.log(errorThrown)  
+//         }               
+
+//     })
+// })
 /////////////////////////////////////////////////////////////////// PRODUCTOS - CONSTRUCTOR /////////////////////////////////////////////////////////////////////////////////////////
 function producto(nombre, precio, cantidad, moneda, tipo){
     this.nombre = nombre;//el this hace refencia a la instancia del objeto que se esta creando
@@ -12,6 +37,10 @@ function producto(nombre, precio, cantidad, moneda, tipo){
 let producto1=3
 let producto2=20
 let producto3=15
+let producto4= 30
+let producto5= 20
+
+
 
 let mermeladaFrutilla = new producto("Mermelada de Frutilla", 250, producto1, "$", "Mermeladas");
 let mermeladaManzana = new producto("Mermelada de Manzana y Pera", 270, producto2, "$", "Mermeladas");
@@ -43,105 +72,7 @@ let reducer = (accumulator, currentValue) => accumulator + currentValue;        
 
 /////////////////////////////////////////////////////////////////// FUNCIONES DE COMPRA /////////////////////////////////////////////////////////////////////////////////////////////
 
-// item1
-// function compraFrutilla() {
 
-
-//     if(producto1 > 0){
-//         for (let i = 0; i < cantidadItem1; i++){
-//             carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
-//             carritoP.push(mermeladaFrutilla);     
-            
-//         }
-//         // carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
-//         // carritoP.push(mermeladaFrutilla);                                                   // mi array de objetos
-//         console.log(carrito);                                                                   
-//         alert("Has agregado una mermelada de Fresa al carrito.");
-//         total = carrito.reduce(reducer);                                                        // add
-//         alert("el precio total es de " + total + "pesos")
-//         final = carrito.concat(carritoP);                                                   
-//         console.log(final);
-//         console.log("ahora el total del carrito es "+ total + "pesos")
-//         totalDom.innerHTML = `${total}`
-//         carritoText()
-//         console.log(`${carritoP}`)
-//         producto1 = producto1-cantidadItem1
-//         cantDis1.innerHTML = `${producto1}`
-//         resetProducto()
-//         cantLand1C.innerHTML = `${mermeladaFrutilla.cantidad - producto1}`
-//         sub1.innerHTML = `${(mermeladaFrutilla.cantidad - producto1) * mermeladaFrutilla.precio}`
-//         $( ".disappear1").show();
-//         console.log(total)
-//     }
-//     else{
-//         alert('ya no hay')
-//     }
-
-
-// }
-
-// // item2
-// function compraNaranja() {
-//     if(producto3 > 0){
-//         for (let i = 0; i < cantidadItem3; i++){
-//             carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
-//             carritoP.push(mermeladaNaranja);     
-//         }
-//         // carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
-//         // carritoP.push(mermeladaNaranja);                                                    // mi array de objetos
-//         console.log(carrito);                                                                   
-//         alert("Has agregado una mermelada de Naranja al carrito.");
-//         total = carrito.reduce(reducer);                                                    // add
-//         alert("el precio total es de " + total + "pesos")
-//         final = carrito.concat(carritoP);                                                   
-//         console.log(final);
-//         console.log("ahora el total del carrito es "+ total + "pesos")
-//         totalDom.innerHTML = `${total}`
-//         carritoText()
-//         console.log(`${carritoP}`)
-//         producto3 = producto3-cantidadItem3
-//         cantDis3.innerHTML = `${producto3}`
-//         resetProducto()
-//         cantLand3C.innerHTML = `${mermeladaNaranja.cantidad - producto3}`
-//         sub3.innerHTML = `${(mermeladaNaranja.cantidad - producto3) * mermeladaNaranja.precio}`
-//         $( ".disappear3").show();
-//     }
-//     else{
-//         alert('ya no hay')
-//     }
-// }
-
-// // item3
-// function compraManzana() {
-//     if(producto2 > 0){  
-//         for (let i = 0; i < cantidadItem2; i++){
-//             carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
-//             carritoP.push(mermeladaManzana);   
-//         }
-//         // carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
-//         // carritoP.push(mermeladaManzana);                                                    // mi array de objetos
-//         console.log(carrito);                                                                   
-//         alert("Has agregado una mermelada de Manzana al carrito.");
-//         total = carrito.reduce(reducer);                                                    // add
-//         alert("el precio total es de " + total + "pesos")
-//         final = carrito.concat(carritoP);                                                   
-//         console.log(final);
-//         console.log("ahora el total del carrito es "+ total + "pesos")
-//         totalDom.innerHTML = `${total}`
-//         carritoText()
-//         console.log(`${carritoP}`)
-//         producto2 = producto2-cantidadItem2
-//         cantDis2.innerHTML = `${producto2}`
-//         resetProducto()
-//         // subtotal2 = subtotal2 + (mermeladaManzana.precio * cantidadItem2)    
-//         cantLand2C.innerHTML = `${mermeladaManzana.cantidad - producto2}`
-//         sub2.innerHTML = `${(mermeladaManzana.cantidad - producto2) * mermeladaManzana.precio}`
-//         $( ".disappear2").show(); 
-//     }
-//     else{
-//         alert('ya no hay')
-//     }
-// }
 
 function comprar(){
     if(compras==="frutilla"){
@@ -243,6 +174,74 @@ function comprar(){
             // alert('ya no hay')
             alertaWarning()
         }
+    }else     if(compras==="frutilla2"){ //temporada2
+        if(producto4 > 0){
+            for (let i = 0; i < cantidadItem4; i++){
+                carrito.push(golfeado.precio);                                             // totalizador de la compra
+                carritoP.push(golfeado);     
+                
+            }
+            // carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
+            // carritoP.push(mermeladaFrutilla);                                                   // mi array de objetos
+            console.log(carrito);                                                                   
+            // alert("Has agregado una mermelada de Fresa al carrito.");
+            total = carrito.reduce(reducer);                                                        // add
+            // alert("el precio total es de " + total + "pesos")
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto4 = producto4-cantidadItem4
+            cantDis4.innerHTML = `${producto4}`
+            resetProducto()
+            cantLand4C.innerHTML = `${golfeado.cantidad - producto4}`
+            sub4.innerHTML = `${(golfeado.cantidad - producto4) * golfeado.precio}`
+            $( ".disappear4").show();
+            console.log(total)
+            avisoLens()
+            alertaSuccess()
+            noBorrarFav=false
+        }
+        else{
+            noBorrarFav=true
+            // alert('ya no hay')
+            alertaWarning()
+        }
+    }else if(compras==="manzana2"){
+        if(producto5 > 0){  
+            for (let i = 0; i < cantidadItem5; i++){
+                carrito.push(golfeadoQ.precio);                                              // totalizador de la compra
+                carritoP.push(golfeadoQ);   
+            }
+            // carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
+            // carritoP.push(mermeladaManzana);                                                    // mi array de objetos
+            console.log(carrito);                                                                   
+            // alert("Has agregado una mermelada de Manzana al carrito.");
+            total = carrito.reduce(reducer);                                                    // add
+            // alert("el precio total es de " + total + "pesos")
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto5 = producto5-cantidadItem5
+            cantDis5.innerHTML = `${producto5}`
+            resetProducto()
+            // subtotal2 = subtotal2 + (mermeladaManzana.precio * cantidadItem2)    
+            cantLand5C.innerHTML = `${golfeadoQ.cantidad - producto5}`
+            sub5.innerHTML = `${(golfeadoQ.cantidad - producto5) * golfeadoQ.precio}`
+            $( ".disappear5").show(); 
+            avisoLens()
+            alertaSuccess()
+        }
+        else{
+            // alert('ya no hay')
+            alertaWarning()
+        }
+
     }
 }
 
@@ -343,6 +342,70 @@ function comprar2(){
             alertaWarning()
             sub3.innerHTML = `${(mermeladaNaranja.cantidad - producto3) * mermeladaNaranja.precio}`
         }
+    }else     if(compras==="frutilla2"){ // temporada2
+        if(producto4 > 0){
+            for (let i = 0; i < cantidadItem4; i++){
+                carrito.push(golfeado.precio);                                             // totalizador de la compra
+                carritoP.push(golfeado);     
+                
+            }
+            // carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
+            // carritoP.push(mermeladaFrutilla);                                                   // mi array de objetos
+            console.log(carrito);                                                                   
+            total = carrito.reduce(reducer);                                                        // add
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto4 = producto4-cantidadItem4
+            cantDis4.innerHTML = `${producto4}`
+            resetProducto()
+            cantLand4C.innerHTML = `${golfeado.cantidad - producto4}`
+            sub4.innerHTML = `${(golfeado.cantidad - producto4) * golfeado.precio}`
+            $( ".disappear4").show();
+            console.log(total)
+            avisoLens()
+            totalUp()
+        }
+        else{
+            // alert('ya no hay')
+            alertaWarning()
+            sub4.innerHTML = `${(golfeado.cantidad - producto4) * golfeado.precio}`
+        }
+    }else if(compras==="manzana2"){
+        if(producto5 > 0){  
+            for (let i = 0; i < cantidadItem5; i++){
+                carrito.push(golfeadoQ.precio);                                              // totalizador de la compra
+                carritoP.push(golfeadoQ);   
+            }
+            // carrito.push(mermeladaManzana.precio);                                              // totalizador de la compra
+            // carritoP.push(mermeladaManzana);                                                    // mi array de objetos
+            console.log(carrito);                                                                   
+            total = carrito.reduce(reducer);                                                    // add
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto5 = producto5-cantidadItem5
+            cantDis5.innerHTML = `${producto5}`
+            resetProducto()
+            // subtotal2 = subtotal2 + (mermeladaManzana.precio * cantidadItem2)    
+            cantLand5C.innerHTML = `${golfeadoQ.cantidad - producto5}`
+            sub5.innerHTML = `${(golfeadoQ.cantidad - producto5) * golfeadoQ.precio}`
+            $( ".disappear5").show(); 
+            avisoLens()
+            totalUp()
+        }
+        else{
+            // alert('ya no hay')
+            alertaWarning()
+            sub5.innerHTML = `${(golfeadoQ.cantidad - producto5) * golfeadoQ.precio}`
+        }
+
     }
 }
 
@@ -370,11 +433,6 @@ function restar2(){
                 console.log(total)
             }
 
-            
-        // }
-        // else{
-        //     alert('ya no hay')
-        // }
     }else if(compras==="manzana"){
         // if(producto1 > 0){
             if((mermeladaManzana.cantidad - producto2)>1){
@@ -396,11 +454,6 @@ function restar2(){
                 console.log(total)
             }
 
-            
-        // }
-        // else{
-        //     alert('ya no hay')
-        // }
     }else if(compras==="naranja"){
         // if(producto1 > 0){
             if((mermeladaNaranja.cantidad - producto3)>1){
@@ -427,6 +480,48 @@ function restar2(){
         // else{
         //     alert('ya no hay')
         // }
+    }else     if(compras==="frutilla2"){ //temporada 2
+        // if(producto1 > 0){
+            if((golfeado.cantidad - producto4)>1){
+                carrito.push(-220); 
+                console.log(carrito);                                                                   
+                total = carrito.reduce(reducer);                                                        // add
+                console.log("ahora el total del carrito es "+ total + "pesos")
+                totalDom.innerHTML = `${total}`
+                carritoText()
+                console.log(`${carritoP}`)
+                producto4 = producto4+1
+                cantDis4.innerHTML = `${producto4}`
+                resetProducto()
+                cantLand4C.innerHTML = `${golfeado.cantidad - producto4}`
+                sub4.innerHTML = `${((golfeado.cantidad - producto4) * golfeado.precio)}`
+                console.log(total)
+                totalDown()
+            }else{
+                console.log(total)
+            }
+
+    }else if(compras==="manzana2"){
+        // if(producto1 > 0){
+            if((golfeadoQ.cantidad - producto5)>1){
+                carrito.push(-300); 
+                console.log(carrito);                                                                   
+                total = carrito.reduce(reducer);                                                        // add
+                console.log("ahora el total del carrito es "+ total + "pesos")
+                totalDom.innerHTML = `${total}`
+                carritoText()
+                console.log(`${carritoP}`)
+                producto5 = producto5+1
+                cantDis5.innerHTML = `${producto5}`
+                resetProducto()
+                cantLand5C.innerHTML = `${golfeadoQ.cantidad - producto5}`
+                sub5.innerHTML = `${((golfeadoQ.cantidad - producto5) * golfeadoQ.precio)}`
+                console.log(total)
+                totalDown()
+            }else{
+                console.log(total)
+            }
+
     }
 }
 
@@ -443,24 +538,36 @@ let item = ""
 let cantidadItem1 = 1
 let cantidadItem2 = 1
 let cantidadItem3 = 1
+let cantidadItem4 = 1
+let cantidadItem5 = 1
 // let cantidadItem1C = 1
 // let cantidadItem2C = 1
 // let cantidadItem3C = 1
 let subtotal1 = mermeladaFrutilla.precio * cantidadItem1
 let subtotal2 = mermeladaManzana.precio * cantidadItem2
 let subtotal3 = mermeladaNaranja.precio * cantidadItem3
+let subtotal4 = golfeado.precio * cantidadItem4
+let subtotal5 = golfeadoQ.precio * cantidadItem5
 const cantLand1 = document.querySelector('.cantidadItem1');
 const cantLand1C = document.querySelector('.cantidadItem1C');
 const cantLand2 = document.querySelector('.cantidadItem2');
 const cantLand2C = document.querySelector('.cantidadItem2C');
 const cantLand3 = document.querySelector('.cantidadItem3');
-const cantLand3C = document.querySelector('.cantidadItem3C');
+const cantLand3C = document.querySelector('.cantidadItem3C'); 
+const cantLand4 = document.querySelector('.cantidadItem4'); //temporada 2
+const cantLand4C = document.querySelector('.cantidadItem4C');
+const cantLand5 = document.querySelector('.cantidadItem5');
+const cantLand5C = document.querySelector('.cantidadItem5C');
 const sub1 = document.querySelector('.sub1');
 const sub2 = document.querySelector('.sub2');
 const sub3 = document.querySelector('.sub3');
+const sub4 = document.querySelector('.sub4');
+const sub5 = document.querySelector('.sub5');
 sub1.innerHTML = `${subtotal1}`
 sub2.innerHTML = `${subtotal2}`
 sub3.innerHTML = `${subtotal3}`
+sub4.innerHTML = `${subtotal4}`
+sub5.innerHTML = `${subtotal5}`
 cantLand1.innerHTML = `${cantidadItem1}`
 cantLand1C.innerHTML = `${cantidadItem1}`
 // cantLand1C.innerHTML = `${subtotal1/mermeladaFrutilla.precio}`
@@ -468,12 +575,20 @@ cantLand2.innerHTML = `${cantidadItem2}`
 cantLand2C.innerHTML = `${cantidadItem2}`
 cantLand3.innerHTML = `${cantidadItem3}`
 cantLand3C.innerHTML = `${cantidadItem3}`
+cantLand4.innerHTML = `${cantidadItem4}`
+cantLand4C.innerHTML = `${cantidadItem4}`
+cantLand5.innerHTML = `${cantidadItem5}`
+cantLand5C.innerHTML = `${cantidadItem5}`
 const cantDis1 = document.querySelector('#cFrutilla');
 const cantDis2 = document.querySelector('#cManzana');
 const cantDis3 = document.querySelector('#cNaranja');
+const cantDis4 = document.querySelector('#cFrutilla2');
+const cantDis5 = document.querySelector('#cManzana2');
 cantDis1.innerHTML = `${producto1}`
 cantDis2.innerHTML = `${producto2}`
 cantDis3.innerHTML = `${producto3}`
+cantDis4.innerHTML = `${producto4}`
+cantDis5.innerHTML = `${producto5}`
 
 
 
@@ -499,6 +614,20 @@ function sumarCant(){
             cantLand3C.innerHTML = `${cantidadItem3}`
         }
 
+    }else     if(item == "addFrutilla2"){ //temporada2
+        if(cantidadItem4 < golfeado.cantidad && cantidadItem4 < producto4){
+            // cantidadItem1 = cantidadItem1 + 1
+            cantidadItem4 = cantidadItem4 + 1
+            cantLand4.innerHTML = `${cantidadItem4}`
+            cantLand4C.innerHTML = `${cantidadItem4}`
+        }
+    }else if(item =="addManzana2"){
+        if(cantidadItem5 < golfeadoQ.cantidad && cantidadItem5 < producto5){
+            cantidadItem5 = cantidadItem5 + 1
+            // cantidadItem2 = subtotal2 / mermeladaManzana.precio + 1
+            cantLand5.innerHTML = `${cantidadItem5}`
+            cantLand5C.innerHTML = `${cantidadItem5}`
+        }
     }
 }
 
@@ -521,6 +650,19 @@ function restarCant(){
             cantidadItem3 = cantidadItem3 - 1
             cantLand3.innerHTML = `${cantidadItem3}`
             cantLand3C.innerHTML = `${cantidadItem3}`
+        }
+    }else     if(item == "removeFrutilla2"){ //temporada2
+        if(cantidadItem4 >1){
+            cantidadItem4 = cantidadItem4 - 1
+            cantLand4.innerHTML = `${cantidadItem4}`
+            cantLand4C.innerHTML = `${cantidadItem4}`
+        }
+    }else if(item =="removeManzana2"){
+        if(cantidadItem5 >1){
+            // cantidadItem2 = cantidadItem2 - 1
+            cantidadItem5 = cantidadItem5 - 1
+            cantLand5.innerHTML = `${cantidadItem5}`
+            cantLand5C.innerHTML = `${cantidadItem5}`
         }
     }
 }
@@ -552,7 +694,21 @@ for (let i = 0; i < sumarNow.length; i++) {
                 sumarCant();
                 subtotal2 = mermeladaManzana.precio * cantidadItem2
                 sub2.innerHTML = `${subtotal2}`
-                break;    
+                break;   
+            case "addFrutilla2":
+                item=e.target.accessKey
+                console.log(item)
+                sumarCant();
+                subtotal4 = golfeado.precio * cantidadItem4
+                sub4.innerHTML = `${subtotal4}`
+                break;
+            case "addManzana2":
+                item=e.target.accessKey
+                console.log(item)
+                sumarCant();
+                subtotal5 = golfeadoQ.precio * cantidadItem5
+                sub5.innerHTML = `${subtotal5}`
+                break; 
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                 break;
@@ -586,7 +742,21 @@ for (let i = 0; i < sumarNow.length; i++) {
                  restarCant();
                  subtotal2 = mermeladaManzana.precio * cantidadItem2
                  sub2.innerHTML = `${subtotal2}`
-                 break;    
+                 break;  
+            case "removeFrutilla2":
+                item=e.target.accessKey
+                console.log(item)
+                restarCant();
+                subtotal4 = golfeado.precio * cantidadItem4
+                sub4.innerHTML = `${subtotal4}`
+                break;
+            case "removeManzana2":
+                item=e.target.accessKey
+                console.log(item)
+                restarCant();
+                subtotal5 = golfeadoQ.precio * cantidadItem5
+                sub5.innerHTML = `${subtotal5}`
+                break;  
              default:
                  //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                  break;
@@ -628,6 +798,24 @@ for (let i = 0; i < sumarNow.length; i++) {
                 compras = "manzana"
                 comprar2();
                 break;    
+            case "addFrutilla2":
+                item=e.target.accessKey
+                console.log(item)
+                // sumarCant();
+                subtotal4 = golfeado.precio * cantidadItem4
+                sub4.innerHTML = `${subtotal4}`
+                compras = "frutilla2"
+                comprar2();
+                break;
+            case "addManzana2":
+                item=e.target.accessKey
+                console.log(item)
+                // sumarCant();
+                subtotal5 = golfeadoQ.precio * cantidadItem5
+                sub5.innerHTML = `${subtotal5}`
+                compras = "manzana2"
+                comprar2();
+                break;
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                 break;
@@ -668,6 +856,24 @@ for (let i = 0; i < sumarNow.length; i++) {
                  compras = "manzana"
                  restar2();
                  break;    
+            case "removeFrutilla2":
+                item=e.target.accessKey
+                console.log(item)
+                restarCant();
+                subtotal4 = golfeado.precio * cantidadItem4
+                sub4.innerHTML = `${subtotal4}`
+                compras = "frutilla2"
+                restar2();
+                break;
+            case "removeManzana2":
+                item=e.target.accessKey
+                console.log(item)
+                restarCant();
+                subtotal5 = golfeadoQ.precio * cantidadItem5
+                sub5.innerHTML = `${subtotal5}`
+                compras = "manzana2"
+                restar2();
+                break;
              default:
                  //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                  break;
@@ -750,6 +956,22 @@ for (let i = 0; i < botonNow.length; i++) {
                 //     compraManzana();
                 // }
                 break; 
+            case "frutilla2":
+                compras = e.target.accessKey
+                // console.log(compras)
+                // console.log("test")
+                comprar();
+                // for (let i = 0; i < cantidadItem1; i++){
+                //     compraFrutilla();
+                // }
+                break;
+            case "manzana2":
+                compras = e.target.accessKey
+                comprar();
+                // for (let i = 0; i < cantidadItem3; i++){
+                //     compraNaranja();
+                // }
+                break;
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                 break;
@@ -761,9 +983,13 @@ function resetProducto(){
     cantidadItem1 = 1
     cantidadItem2 = 1
     cantidadItem3 = 1
+    cantidadItem4 = 1
+    cantidadItem5 = 1
     cantLand1.innerHTML = `${cantidadItem1}`
     cantLand2.innerHTML = `${cantidadItem2}`
     cantLand3.innerHTML = `${cantidadItem3}`
+    cantLand4.innerHTML = `${cantidadItem4}`
+    cantLand5.innerHTML = `${cantidadItem5}`
 }
 resetProducto()
 
@@ -780,23 +1006,16 @@ function helpMe(){
 $( ".disappear1").hide();
 $( ".disappear2").hide();
 $( ".disappear3").hide();
+$( ".disappear4").hide();
+$( ".disappear5").hide();
 
 $(document).ready(function(){
     $(".test1").click(function(){
       $(".disappear1").hide();
       producto1=mermeladaFrutilla.cantidad
       cantDis1.innerHTML = `${producto1}`
-      //total = 0
-    console.log(total)
-    // resetArray() 
-    // for(let i=0; i<carrito.length; i++) {
 
-    //     if (carrito[i] === mermeladaFrutilla.precio) {
-    //         // delete carrito[i]
-    //         carrito.splice(i)
-    //     }}
-    //     // total = carrito.reduce(reducer);  
-    //     helpMe()
+    console.log(total)
     for(let i=0; i<carrito.length; i++) {
 
         if (carrito[i] === mermeladaFrutilla.precio || carrito[i] === -250) {
@@ -817,18 +1036,7 @@ $(document).ready(function(){
       $(".disappear2").hide();
       producto2=mermeladaManzana.cantidad
       cantDis2.innerHTML = `${producto2}`
-      //total = 0
     console.log(total)
-    // resetArray() 
-    // for(let i=0; i<carrito.length; i++) {
-
-    //     if (carrito[i] === mermeladaManzana.precio) {
-    //         // delete carrito[i]
-    //         carrito.splice(i)
-    //     }}
-    //     // total = carrito.reduce(reducer);  
-    //     helpMe()
-    
     for(let i=0; i<carrito.length; i++) {
 
         if (carrito[i] === mermeladaManzana.precio || carrito[i] === -270) {
@@ -870,6 +1078,63 @@ $(document).ready(function(){
     });
 });
 
+///////////TEMPORADA "2"
+$(document).ready(function(){
+    $(".test4").click(function(){
+      $(".disappear4").hide();
+      producto4=golfeado.cantidad
+      cantDis4.innerHTML = `${producto4}`
+      //total = 0
+    console.log(total)
+    // resetArray() 
+    // for(let i=0; i<carrito.length; i++) {
+
+    //     if (carrito[i] === mermeladaNaranja.precio) {
+    //         carrito.splice(i)
+    //     }}
+    //     helpMe() 
+    //     totalDom.innerHTML = `${total}`
+    for(let i=0; i<carrito.length; i++) {
+
+        if (carrito[i] === golfeado.precio || carrito[i] === -220) {
+            // delete carrito[i]
+            carrito[i]=0
+        }}
+        // total = carrito.reduce(reducer);  
+        total = carrito.reduce(reducer);  
+        totalDom.innerHTML = `${total}`
+        avisoLens()
+    });
+});
+
+
+$(document).ready(function(){
+    $(".test5").click(function(){
+      $(".disappear5").hide();
+      producto5=golfeadoQ.cantidad
+      cantDis5.innerHTML = `${producto5}`
+      //total = 0
+    console.log(total)
+    // resetArray() 
+    // for(let i=0; i<carrito.length; i++) {
+
+    //     if (carrito[i] === mermeladaNaranja.precio) {
+    //         carrito.splice(i)
+    //     }}
+    //     helpMe() 
+    //     totalDom.innerHTML = `${total}`
+    for(let i=0; i<carrito.length; i++) {
+
+        if (carrito[i] === golfeadoQ.precio || carrito[i] === -300) {
+            // delete carrito[i]
+            carrito[i]=0
+        }}
+        // total = carrito.reduce(reducer);  
+        total = carrito.reduce(reducer);  
+        totalDom.innerHTML = `${total}`
+        avisoLens()
+    });
+});
 
 
 
@@ -979,3 +1244,6 @@ $( "#moneda" ).click(function(e) {
 
 $( ".monedaUsd").hide();
 $( ".monedaArs").show();
+
+// producto4= golfeado.cantidad
+// producto5= 20
