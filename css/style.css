@@ -1003,4 +1003,16 @@ body {
   justify-content: center;
 }
 
+.borderImg img {
+  height: 120px;
+  width: 120px;
+  border: solid 0.1px #c4a990;
+}
+
+.borderImg2 img {
+  height: 120px;
+  width: 80px;
+  border: solid 0.1px #c4a990;
+}
+
 /*# sourceMappingURL=style.css.map */

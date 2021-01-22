@@ -51,3 +51,5 @@ for (let i = 0; i < prevent.length; i++) {
 
      });
  };
+
+ console.log("Por favor, corre el index desde live server o xampp para que se instancien los objetos del JSON")

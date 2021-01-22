@@ -93,6 +93,7 @@ function comprar(){
             console.log(final);
             console.log("ahora el total del carrito es "+ total + "pesos")
             totalDom.innerHTML = `${total}`
+            // totalDom.innerHTML = `${totalDolar}`
             carritoText()
             console.log(`${carritoP}`)
             producto1 = producto1-cantidadItem1
@@ -290,10 +291,16 @@ function comprar2(){
             // carrito.push(mermeladaFrutilla.precio);                                             // totalizador de la compra
             // carritoP.push(mermeladaFrutilla);                                                   // mi array de objetos
             console.log(carrito);                                                                   
-            total = carrito.reduce(reducer);                                                        // add
+            total = carrito.reduce(reducer);     
+            totalDolar = (total / dolar).toFixed(2);       
             final = carrito.concat(carritoP);                                                   
             console.log(final);
             console.log("ahora el total del carrito es "+ total + "pesos")
+            // if(vistaDolar===false){
+            //     totalDom.innerHTML = `${total}`
+            // }else{
+            //     totalDom.innerHTML = `${totalDolar}`
+            // }
             totalDom.innerHTML = `${total}`
             carritoText()
             console.log(`${carritoP}`)
@@ -1395,7 +1402,7 @@ $(function(){
         //   console.log(data.casa[0]);
         console.log(data[1].casa.venta);
         dolar = parseFloat(data[1].casa.venta)
-        console.log(`el valor del dolarBlue es ${dolar}. Fuente: https://www.dolarsi.com/api/api.php?type=valoresprincipales`);
+        console.log(`AJAX: el valor del dolarBlue es ${dolar}. Fuente: https://www.dolarsi.com/api/api.php?type=valoresprincipales`);
         },
         // error: function(xhr,status,errorThrown){
         //     console.log(xhr)  
@@ -1415,7 +1422,7 @@ function testing(){
 
 
 // console.log(greaterTen2); // [23, 12, 45, 78, 11, 10.1, 84]
-let tomm = ""
+let vistaDolar = false
 
 $( "#moneda" ).click(function(e) {
     console.log(e.target.attributes[3].value)
@@ -1427,10 +1434,12 @@ $( "#moneda" ).click(function(e) {
         totalDolar = total / dolar
         totalDolar = (Math.round(totalDolar * 100) / 100).toFixed(2);
         $('#totalDolar').html(`${totalDolar}`);
+        vistaDolar = false
     }
     else{
         $( ".monedaUsd").hide();
         $( ".monedaArs").show();
+        vistaDolar = true
     }
 
   });

@@ -375,3 +375,21 @@ body{
 //     z-index: 10000;
 //     width: 100%;
 // }
+
+.borderImg{
+
+    img{
+        height: 120px;
+        width: 120px;
+        border: solid 0.1px #c4a990;
+    }
+}
+
+.borderImg2{
+
+    img{
+        height: 120px;
+        width: 80px;
+        border: solid 0.1px #c4a990;
+    }
+}
