@@ -768,6 +768,17 @@
   margin-top: auto;
 }
 
+#footer {
+  -webkit-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 20px 20px -20px rgba(0, 0, 0, 0.8);
+  width: 200px;
+}
+#footer .intro, #footer .gb {
+  height: 100px;
+  background: linear-gradient(to right, #f5ece3, white, #f5ece3, white);
+}
+
 #introImg img {
   margin-top: 140px !important;
 }
@@ -777,12 +788,32 @@
   position: fixed;
   width: 100%;
   z-index: 16;
+  box-shadow: 0 2.8px 2.2px rgba(188, 147, 192, 0.034), 0 6.7px 5.3px rgba(137, 96, 141, 0.034), 0 12.5px 10px rgba(108, 56, 112, 0.034), 0 22.3px 17.9px rgba(94, 38, 99, 0.034), 0 41.8px 33.4px rgba(84, 22, 90, 0.034), 0 100px 80px rgba(57, 11, 61, 0.034);
 }
 
 body {
   background: linear-gradient(to right, #f5ece3, white);
 }
 
+@-webkit-keyframes animation {
+  0% {
+    background-color: #f5ece3;
+  }
+  50.0% {
+    background-color: #dabada;
+  }
+  100.0% {
+    background-color: #bb8fbb;
+  }
+}
+@-webkit-keyframes glow3 {
+  from {
+    background: 0 0 3px #fff, 0 0 3px #fff, 0 0 4px #a047a0, 0 0 5px #a047a0, 0 0 7px #a047a0, 0 0 7px #a047a0, 0 0 9px #a047a0;
+  }
+  to {
+    background: 0 0 5px #fff, 0 0 7px #f5ece3, 0 0 10px #f5ece3, 0 0 13px #f5ece3, 0 0 15px #f5ece3, 0 0 17px #f5ece3, 0 0 20px #f5ece3;
+  }
+}
 #header .logo {
   height: 130px !important;
   width: 130px;
@@ -875,42 +906,6 @@ body {
 }
 
 /******************************************************************************FOOTER***************************************************************************/
-#footer {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-#footer .footer {
-  background: #152F4F;
-  color: white;
-}
-#footer .footer .links ul {
-  list-style-type: none;
-}
-#footer .footer .links li a {
-  color: white;
-  transition: color 0.2s;
-}
-#footer .footer .links li a:hover {
-  text-decoration: none;
-  color: #4180CB;
-}
-#footer .footer .about-company i {
-  font-size: 25px;
-}
-#footer .footer .about-company a {
-  color: white;
-  transition: color 0.2s;
-}
-#footer .footer .about-company a:hover {
-  color: #4180CB;
-}
-#footer .footer .location i {
-  font-size: 18px;
-}
-#footer .footer .copyright p {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .ajusteCol {
   margin: 0;
   padding: 0;

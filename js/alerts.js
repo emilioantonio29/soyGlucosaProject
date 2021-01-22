@@ -12,7 +12,7 @@
 
 function alertaWarning(){
     
-    $( "div.warning" ).fadeIn( 200 ).delay( 700 ).fadeOut( 200 );
+    $( "div.warning" ).fadeIn( 100 ).delay( 400 ).fadeOut( 100 );
     // $("div.success3").html("Total:"total);
     // $( "div.success3" ).fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );
 }

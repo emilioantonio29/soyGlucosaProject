@@ -39,6 +39,7 @@ let producto2=20
 let producto3=15
 let producto4= 30
 let producto5= 20
+let producto6= 10
 
 
 
@@ -242,6 +243,37 @@ function comprar(){
             alertaWarning()
         }
 
+    }else if(compras==="naranja2"){
+        if(producto6 > 0){
+            for (let i = 0; i < cantidadItem6; i++){
+                carrito.push(panDeJamon.precio);                                              // totalizador de la compra
+                carritoP.push(panDeJamon);     
+            }
+            // carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
+            // carritoP.push(mermeladaNaranja);                                                    // mi array de objetos
+            console.log(carrito);                                                                   
+            // alert("Has agregado una mermelada de Naranja al carrito.");
+            total = carrito.reduce(reducer);                                                    // add
+            // alert("el precio total es de " + total + "pesos")
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto6 = producto6-cantidadItem6
+            cantDis6.innerHTML = `${producto6}`
+            resetProducto()
+            cantLand6C.innerHTML = `${panDeJamon.cantidad - producto6}`
+            sub6.innerHTML = `${(panDeJamon.cantidad - producto6) * panDeJamon.precio}`
+            $( ".disappear6").show();
+            avisoLens()
+            alertaSuccess()
+        }
+        else{
+            // alert('ya no hay')
+            alertaWarning()
+        }
     }
 }
 
@@ -406,6 +438,36 @@ function comprar2(){
             sub5.innerHTML = `${(golfeadoQ.cantidad - producto5) * golfeadoQ.precio}`
         }
 
+    }else if(compras==="naranja2"){
+        if(producto6 > 0){
+            for (let i = 0; i < cantidadItem6; i++){
+                carrito.push(panDeJamon.precio);                                              // totalizador de la compra
+                carritoP.push(panDeJamon);     
+            }
+            // carrito.push(mermeladaNaranja.precio);                                              // totalizador de la compra
+            // carritoP.push(mermeladaNaranja);                                                    // mi array de objetos
+            console.log(carrito);                                                                   
+            total = carrito.reduce(reducer);                                                    // add
+            final = carrito.concat(carritoP);                                                   
+            console.log(final);
+            console.log("ahora el total del carrito es "+ total + "pesos")
+            totalDom.innerHTML = `${total}`
+            carritoText()
+            console.log(`${carritoP}`)
+            producto6 = producto6-cantidadItem6
+            cantDis6.innerHTML = `${producto6}`
+            resetProducto()
+            cantLand6C.innerHTML = `${panDeJamon.cantidad - producto6}`
+            sub6.innerHTML = `${(panDeJamon.cantidad - producto6) * panDeJamon.precio}`
+            $( ".disappear6").show();
+            avisoLens()
+            totalUp()
+        }
+        else{
+            // alert('ya no hay')
+            alertaWarning()
+            sub6.innerHTML = `${(panDeJamon.cantidad - producto6) * panDeJamon.precio}`
+        }
     }
 }
 
@@ -522,6 +584,32 @@ function restar2(){
                 console.log(total)
             }
 
+    }else if(compras==="naranja2"){
+        // if(producto1 > 0){
+            if((panDeJamon.cantidad - producto6)>1){
+                carrito.push(-1000); 
+                console.log(carrito);                                                                   
+                total = carrito.reduce(reducer);                                                        // add
+                console.log("ahora el total del carrito es "+ total + "pesos")
+                totalDom.innerHTML = `${total}`
+                carritoText()
+                console.log(`${carritoP}`)
+                producto6 = producto6+1
+                cantDis6.innerHTML = `${producto6}`
+                resetProducto()
+                cantLand6C.innerHTML = `${panDeJamon.cantidad - producto6}`
+                sub6.innerHTML = `${((panDeJamon.cantidad - producto6) * panDeJamon.precio)}`
+                console.log(total)
+                totalDown()
+            }else{
+                console.log(total)
+            }
+
+            
+        // }
+        // else{
+        //     alert('ya no hay')
+        // }
     }
 }
 
@@ -540,6 +628,7 @@ let cantidadItem2 = 1
 let cantidadItem3 = 1
 let cantidadItem4 = 1
 let cantidadItem5 = 1
+let cantidadItem6 = 1
 // let cantidadItem1C = 1
 // let cantidadItem2C = 1
 // let cantidadItem3C = 1
@@ -548,6 +637,7 @@ let subtotal2 = mermeladaManzana.precio * cantidadItem2
 let subtotal3 = mermeladaNaranja.precio * cantidadItem3
 let subtotal4 = golfeado.precio * cantidadItem4
 let subtotal5 = golfeadoQ.precio * cantidadItem5
+let subtotal6 = panDeJamon.precio * cantidadItem6
 const cantLand1 = document.querySelector('.cantidadItem1');
 const cantLand1C = document.querySelector('.cantidadItem1C');
 const cantLand2 = document.querySelector('.cantidadItem2');
@@ -558,16 +648,20 @@ const cantLand4 = document.querySelector('.cantidadItem4'); //temporada 2
 const cantLand4C = document.querySelector('.cantidadItem4C');
 const cantLand5 = document.querySelector('.cantidadItem5');
 const cantLand5C = document.querySelector('.cantidadItem5C');
+const cantLand6 = document.querySelector('.cantidadItem6');
+const cantLand6C = document.querySelector('.cantidadItem6C');
 const sub1 = document.querySelector('.sub1');
 const sub2 = document.querySelector('.sub2');
 const sub3 = document.querySelector('.sub3');
 const sub4 = document.querySelector('.sub4');
 const sub5 = document.querySelector('.sub5');
+const sub6 = document.querySelector('.sub6');
 sub1.innerHTML = `${subtotal1}`
 sub2.innerHTML = `${subtotal2}`
 sub3.innerHTML = `${subtotal3}`
 sub4.innerHTML = `${subtotal4}`
 sub5.innerHTML = `${subtotal5}`
+sub6.innerHTML = `${subtotal6}`
 cantLand1.innerHTML = `${cantidadItem1}`
 cantLand1C.innerHTML = `${cantidadItem1}`
 // cantLand1C.innerHTML = `${subtotal1/mermeladaFrutilla.precio}`
@@ -579,16 +673,20 @@ cantLand4.innerHTML = `${cantidadItem4}`
 cantLand4C.innerHTML = `${cantidadItem4}`
 cantLand5.innerHTML = `${cantidadItem5}`
 cantLand5C.innerHTML = `${cantidadItem5}`
+cantLand6.innerHTML = `${cantidadItem6}`
+cantLand6C.innerHTML = `${cantidadItem6}`
 const cantDis1 = document.querySelector('#cFrutilla');
 const cantDis2 = document.querySelector('#cManzana');
 const cantDis3 = document.querySelector('#cNaranja');
 const cantDis4 = document.querySelector('#cFrutilla2');
 const cantDis5 = document.querySelector('#cManzana2');
+const cantDis6 = document.querySelector('#cNaranja2');
 cantDis1.innerHTML = `${producto1}`
 cantDis2.innerHTML = `${producto2}`
 cantDis3.innerHTML = `${producto3}`
 cantDis4.innerHTML = `${producto4}`
 cantDis5.innerHTML = `${producto5}`
+cantDis6.innerHTML = `${producto6}`
 
 
 
@@ -628,6 +726,13 @@ function sumarCant(){
             cantLand5.innerHTML = `${cantidadItem5}`
             cantLand5C.innerHTML = `${cantidadItem5}`
         }
+    }else if(item =="addNaranja2"){
+        if(cantidadItem6 < panDeJamon.cantidad && cantidadItem6 < producto6){
+            cantidadItem6 = cantidadItem6 + 1
+            cantLand6.innerHTML = `${cantidadItem6}`
+            cantLand6C.innerHTML = `${cantidadItem6}`
+        }
+
     }
 }
 
@@ -663,6 +768,12 @@ function restarCant(){
             cantidadItem5 = cantidadItem5 - 1
             cantLand5.innerHTML = `${cantidadItem5}`
             cantLand5C.innerHTML = `${cantidadItem5}`
+        }
+    }else if(item =="removeNaranja2"){
+        if(cantidadItem6 >1){
+            cantidadItem6 = cantidadItem6 - 1
+            cantLand6.innerHTML = `${cantidadItem6}`
+            cantLand6C.innerHTML = `${cantidadItem6}`
         }
     }
 }
@@ -709,6 +820,13 @@ for (let i = 0; i < sumarNow.length; i++) {
                 subtotal5 = golfeadoQ.precio * cantidadItem5
                 sub5.innerHTML = `${subtotal5}`
                 break; 
+            case "addNaranja2":
+                item=e.target.accessKey
+                console.log(item)
+                sumarCant();
+                subtotal6 = panDeJamon.precio * cantidadItem6
+                sub6.innerHTML = `${subtotal6}`
+                break;
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                 break;
@@ -757,6 +875,13 @@ for (let i = 0; i < sumarNow.length; i++) {
                 subtotal5 = golfeadoQ.precio * cantidadItem5
                 sub5.innerHTML = `${subtotal5}`
                 break;  
+            case "removeNaranja2":
+                item=e.target.accessKey
+                console.log(item)
+                restarCant();
+                subtotal6 = panDeJamon.precio * cantidadItem6
+                sub6.innerHTML = `${subtotal6}`
+                break;
              default:
                  //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                  break;
@@ -816,6 +941,15 @@ for (let i = 0; i < sumarNow.length; i++) {
                 compras = "manzana2"
                 comprar2();
                 break;
+            case "addNaranja2":
+                item=e.target.accessKey
+                console.log(item)
+                // sumarCant();
+                subtotal6 = panDeJamon.precio * cantidadItem6
+                sub6.innerHTML = `${subtotal6}`
+                compras = "naranja2"
+                comprar2();
+                break;
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                 break;
@@ -872,6 +1006,15 @@ for (let i = 0; i < sumarNow.length; i++) {
                 subtotal5 = golfeadoQ.precio * cantidadItem5
                 sub5.innerHTML = `${subtotal5}`
                 compras = "manzana2"
+                restar2();
+                break;
+            case "removeNaranja2":
+                item=e.target.accessKey
+                console.log(item)
+                restarCant();
+                subtotal6 = panDeJamon.precio * cantidadItem6
+                sub6.innerHTML = `${subtotal6}`
+                compras = "naranja2"
                 restar2();
                 break;
              default:
@@ -972,6 +1115,13 @@ for (let i = 0; i < botonNow.length; i++) {
                 //     compraNaranja();
                 // }
                 break;
+            case "naranja2":
+                compras = e.target.accessKey
+                comprar();
+                // for (let i = 0; i < cantidadItem3; i++){
+                //     compraNaranja();
+                // }
+                break;
             default:
                 //Declaraciones ejecutadas cuando ninguno de los valores coincide con el valor de la expresión
                 break;
@@ -985,11 +1135,13 @@ function resetProducto(){
     cantidadItem3 = 1
     cantidadItem4 = 1
     cantidadItem5 = 1
+    cantidadItem6 = 1
     cantLand1.innerHTML = `${cantidadItem1}`
     cantLand2.innerHTML = `${cantidadItem2}`
     cantLand3.innerHTML = `${cantidadItem3}`
     cantLand4.innerHTML = `${cantidadItem4}`
     cantLand5.innerHTML = `${cantidadItem5}`
+    cantLand6.innerHTML = `${cantidadItem6}`
 }
 resetProducto()
 
@@ -1008,6 +1160,7 @@ $( ".disappear2").hide();
 $( ".disappear3").hide();
 $( ".disappear4").hide();
 $( ".disappear5").hide();
+$( ".disappear6").hide();
 
 $(document).ready(function(){
     $(".test1").click(function(){
@@ -1026,7 +1179,7 @@ $(document).ready(function(){
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
         avisoLens()
-
+        alertafailure()
     });
 });
 
@@ -1047,6 +1200,7 @@ $(document).ready(function(){
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
         avisoLens()
+        alertafailure()
     });
 });
 
@@ -1075,6 +1229,7 @@ $(document).ready(function(){
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
         avisoLens()
+        alertafailure()
     });
 });
 
@@ -1104,6 +1259,7 @@ $(document).ready(function(){
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
         avisoLens()
+        alertafailure()
     });
 });
 
@@ -1133,6 +1289,36 @@ $(document).ready(function(){
         total = carrito.reduce(reducer);  
         totalDom.innerHTML = `${total}`
         avisoLens()
+        alertafailure()
+    });
+});
+
+$(document).ready(function(){
+    $(".test6").click(function(){
+      $(".disappear6").hide();
+      producto6=panDeJamon.cantidad
+      cantDis6.innerHTML = `${producto6}`
+      //total = 0
+    console.log(total)
+    // resetArray() 
+    // for(let i=0; i<carrito.length; i++) {
+
+    //     if (carrito[i] === mermeladaNaranja.precio) {
+    //         carrito.splice(i)
+    //     }}
+    //     helpMe() 
+    //     totalDom.innerHTML = `${total}`
+    for(let i=0; i<carrito.length; i++) {
+
+        if (carrito[i] === panDeJamon.precio || carrito[i] === -1000) {
+            // delete carrito[i]
+            carrito[i]=0
+        }}
+        // total = carrito.reduce(reducer);  
+        total = carrito.reduce(reducer);  
+        totalDom.innerHTML = `${total}`
+        avisoLens()
+        alertafailure()
     });
 });
 

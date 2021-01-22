@@ -22,6 +22,7 @@
 @import'carrito2';
 @import'icons';
 @import'productofinal';
+@import'_footer';
 #introImg img{
     margin-top: 140px !important;
     // z-index: -2000;
@@ -48,11 +49,57 @@
     position: fixed;
     width: 100%;
     z-index: 16;
+    // box-shadow: 0 8px 6px -6px black;
+    box-shadow:
+    0 2.8px 2.2px rgba(188, 147, 192, 0.034),
+    0 6.7px 5.3px rgba(137, 96, 141, 0.034),
+    0 12.5px 10px rgba(108, 56, 112, 0.034),
+    0 22.3px 17.9px rgba(94, 38, 99, 0.034),
+    0 41.8px 33.4px rgba(84, 22, 90, 0.034),
+    0 100px 80px rgba(57, 11, 61, 0.034);
   }
 
 body{
     background: linear-gradient(to right, #f5ece3, white);
+    // -webkit-animation: glow3 3s ease-in-out infinite alternate;
+    // -moz-animation: glow3 3s ease-in-out infinite alternate;
+    // animation: glow3 3s ease-in-out infinite alternate;
+    // -webkit-animation-name: animation;
+    // -webkit-animation-duration: 10s;
+    // -webkit-animation-timing-function: ease-in-out;
+    // -webkit-animation-iteration-count: infinite;    
+    // -webkit-animation-play-state: running;
+    
+    // animation-name: animation;
+    // animation-duration: 10s;
+    // animation-timing-function: ease-in-out;
+    // animation-iteration-count: infinite;    
+    // animation-play-state: running;
+    // background-color: #f5ece3;
 }
+
+@-webkit-keyframes animation {
+    0%     {background-color:#f5ece3;}
+    50.0%  {background-color:rgb(218, 186, 218);}
+    100.0%  {background-color:rgb(187, 143, 187);}
+}
+
+// @keyframes animation {
+//     0%     {background-color:red;}
+//     50.0%  {background-color:green;}
+//     100.0%  {background-color:black;}
+// }
+
+@-webkit-keyframes glow3 {
+    from {
+      background: 0 0 3px #fff, 0 0 3px #fff, 0 0 4px rgb(160, 71, 160), 0 0 5px rgb(160, 71, 160), 0 0 7px rgb(160, 71, 160), 0 0 7px rgb(160, 71, 160), 0 0 9px rgb(160, 71, 160);
+    }
+    
+    to {
+        background: 0 0 5px #fff, 0 0 7px #f5ece3, 0 0 10px #f5ece3, 0 0 13px #f5ece3, 0 0 15px #f5ece3, 0 0 17px #f5ece3, 0 0 20px #f5ece3;
+    }
+  }
+
 
 #header{
     .logo{
@@ -236,39 +283,7 @@ body{
 
 /******************************************************************************FOOTER***************************************************************************/
 
-#footer{
-    // border: 1px solid red;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    .footer{
-        background: #152F4F;
-        color:white;
-        
-        .links{
-          ul {list-style-type: none;}
-          li a{
-            color: white;
-            transition: color .2s;
-            &:hover{
-              text-decoration:none;
-              color:#4180CB;
-              }
-          }
-        }  
-        .about-company{
-          i{font-size: 25px;}
-          a{
-            color:white;
-            transition: color .2s;
-            &:hover{color:#4180CB}
-          }
-        } 
-        .location{
-          i{font-size: 18px;}
-        }
-        .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
-      }
-}
+
 
 // * {
 //     margin: 0;
