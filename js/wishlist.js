@@ -38,7 +38,7 @@ function wishlistAct(){
     //     producto5F = JSON.parse(producto5F);
     //     console.log(producto5F)
     // }
-    console.log("algo")
+    // console.log("algo")
 }
 wishlistAct()
 

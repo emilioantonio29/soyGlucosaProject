@@ -1383,22 +1383,29 @@ $(function(){
 
 // API DOLAR BLUE: encontre 
 let dolar = 150 // VALOR POR DEFECTO
-// $(function(){
-//     $.ajax({
-//         // url: 'https://randomuser.me/api/?results=2',
-//         url: 'https://www.dolarsi.com/api/api.php?type=valoresprincipales',
-//         success: function(data,status,xhr) {
-//           console.log(data);
-//         //   console.log(status)  
-//         //   console.log(xhr)  
-//         //   console.log("=")
-//         //   console.log(data.casa[0]);
-//         console.log(data[1].casa.venta);
-//         dolar = parseFloat(data[1].casa.venta)
-//         }
-//       });
+$(function(){
+    $.ajax({
+        // url: 'https://randomuser.me/api/?results=2',
+        url: 'https://www.dolarsi.com/api/api.php?type=valoresprincipales',
+        success: function(data,status,xhr) {
+        
+        //   console.log(status)  
+        //   console.log(xhr)  
+        //   console.log("=")
+        //   console.log(data.casa[0]);
+        console.log(data[1].casa.venta);
+        dolar = parseFloat(data[1].casa.venta)
+        console.log(`el valor del dolarBlue es ${dolar}. Fuente: https://www.dolarsi.com/api/api.php?type=valoresprincipales`);
+        },
+        // error: function(xhr,status,errorThrown){
+        //     console.log(xhr)  
+        //     console.log(status)
+        //     console.log(errorThrown)  
+        //     console.log(`la API https://www.dolarsi.com/api/api.php?type=valoresprincipales está fuera de servicio. El valor del dolar queda por defecto en 150`)
+        // }     
+      });
 
-// })
+})
 
 lens=[]
 function testing(){

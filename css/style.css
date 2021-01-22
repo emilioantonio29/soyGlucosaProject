@@ -772,12 +772,67 @@
   height: 5px;
   background: linear-gradient(to right, #d4c0d4, white, #d4c0d4, white);
 }
-#footer .center {
+#footer .center img {
+  border: 1px solid red;
+  border-radius: 50%;
   height: 200px;
+  width: 200px;
 }
 #footer .gb {
   height: 50px;
   background: linear-gradient(to right, #d4c0d4, white, #d4c0d4, white);
+}
+#footer .gb p {
+  margin: 0px;
+  color: #7e5127 !important;
+}
+#footer .gb p strong a {
+  color: inherit;
+  /* blue colors for links too */
+  text-decoration: inherit;
+  /* no underline */
+}
+#footer .gb p strong:hover {
+  color: #855585;
+}
+#footer .redes {
+  /*=======================FIRMA================*/
+}
+#footer .redes .social-menu2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer .redes .social-menu2 .social-menu22 {
+  list-style: none;
+  margin: 0 10px;
+}
+#footer .redes .social-menu2 .social-menu22 .fa {
+  color: #7e5127;
+  font-size: 25px;
+  line-height: 50px;
+  transition: 0.5s;
+}
+#footer .redes .social-menu2 .social-menu22 .fa:hover {
+  color: #c278c2;
+}
+#footer .redes .social-menu2 .social-menu22 a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  text-align: center;
+  transition: 0.5s;
+  transform: translate(0, 0px);
+  box-shadow: 0px 7px 5px #a077a0;
+}
+
+.separador {
+  height: 7px;
+  background: linear-gradient(to right, #d4c0d4, white, #d4c0d4, white);
+  margin: 0px;
 }
 
 #introImg img {
@@ -875,6 +930,22 @@ body {
 .btnNoStyle2:hover {
   background-color: #e7cce7;
   color: black;
+}
+
+.colorBrown {
+  color: #7e5127 !important;
+}
+
+.colorBrown2 {
+  color: #7e5127 !important;
+}
+
+.colorIcon {
+  color: #b465b4 !important;
+}
+
+.colorBrown:hover {
+  color: #855585 !important;
 }
 
 .product {

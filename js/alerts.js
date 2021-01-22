@@ -42,3 +42,12 @@ function totalDown(){
 function alertafailure(){
     $( "div.failure, p.failure2" ).fadeIn( 200 ).delay( 700 ).fadeOut( 200 );
 }
+
+
+const prevent = document.querySelectorAll('.prevent');
+for (let i = 0; i < prevent.length; i++) {
+    prevent[i].addEventListener("click", function(e) {
+        e.preventDefault()
+
+     });
+ };
