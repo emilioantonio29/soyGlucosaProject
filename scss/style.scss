@@ -57,6 +57,14 @@
     0 22.3px 17.9px rgba(94, 38, 99, 0.034),
     0 41.8px 33.4px rgba(84, 22, 90, 0.034),
     0 100px 80px rgba(57, 11, 61, 0.034);
+    .dropdown-item{
+        .navbar-toggler:focus,
+        .navbar-toggler:active,
+        .navbar-toggler-icon:focus {
+            outline: none;
+            box-shadow: none;
+}
+    }
   }
 
 body{
@@ -177,6 +185,29 @@ body{
 .btnNoStyle:hover{
     background-color:  rgb(231, 204, 231);
 }
+.btnNoStyle2{
+    // border: none;
+    // outline: 0;
+    // padding: 12px;
+
+    // text-align: center;
+    // cursor: pointer;
+
+    // // padding: 0;
+    // // margin: 0;
+    // width: 120px;
+
+    // margin-left: 35px;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.btnNoStyle2:hover{
+    background-color:  rgb(231, 204, 231);
+    color: black;
+}
+
 
 .botonNow {
     // border: none;

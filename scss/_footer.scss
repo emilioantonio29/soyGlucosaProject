@@ -1,14 +1,14 @@
 
 
 #footer{
-    -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
-    -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
-    box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
-
-    width: 200px;
-    .intro, .gb{
-        height: 100px;
-        background: linear-gradient(to right, #f5ece3, white, #f5ece3, white);
+    // -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    // -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    // box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
+    
+    // width: 200px;
+    .intro{
+        height: 5px;
+        background: linear-gradient(to right, rgb(212, 192, 212), white, rgb(212, 192, 212), white);
         // box-shadow:
         // 0 -2.8px -2.2px rgba(188, 147, 192, 0.034),
         // 0 -6.7px -5.3px rgba(137, 96, 141, 0.034),
@@ -16,7 +16,13 @@
         // 0 -22.3px -17.9px rgba(94, 38, 99, 0.034),
         // 0 -41.8px -33.4px rgba(84, 22, 90, 0.034),
         // 0 -100px -80px rgba(57, 11, 61, 0.034);
-
+    }
+    .center{
+        height: 200px;
+    }
+    .gb{
+        height: 50px;
+        background: linear-gradient(to right, rgb(212, 192, 212), white, rgb(212, 192, 212), white);
     }
     
 }
